@@ -1,0 +1,233 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Project\\Digital Library\\Backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\project\\digital library\\backend\\backend\\controllers\\membercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\membercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\project\\digital library\\backend\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\project\\digital library\\backend\\backend\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\project\\digital library\\backend\\backend\\services\\memberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\services\\memberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\project\\digital library\\backend\\backend\\services\\interfaces\\imemberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\services\\interfaces\\imemberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\project\\digital library\\backend\\backend\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\project\\digital library\\backend\\backend\\dtos\\addmemberdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\dtos\\addmemberdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\project\\digital library\\backend\\backend\\models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\project\\digital library\\backend\\backend\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\project\\digital library\\backend\\backend\\dtos\\addbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\dtos\\addbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\project\\digital library\\backend\\backend\\backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\project\\digital library\\backend\\backend\\dtos\\updatebookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\dtos\\updatebookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AddMemberDto.cs",
+              "DocumentMoniker": "D:\\Project\\Digital Library\\Backend\\Backend\\DTOs\\AddMemberDto.cs",
+              "RelativeDocumentMoniker": "Backend\\DTOs\\AddMemberDto.cs",
+              "ToolTip": "D:\\Project\\Digital Library\\Backend\\Backend\\DTOs\\AddMemberDto.cs",
+              "RelativeToolTip": "Backend\\DTOs\\AddMemberDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T13:57:44.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MemberService.cs",
+              "DocumentMoniker": "D:\\Project\\Digital Library\\Backend\\Backend\\Services\\MemberService.cs",
+              "RelativeDocumentMoniker": "Backend\\Services\\MemberService.cs",
+              "ToolTip": "D:\\Project\\Digital Library\\Backend\\Backend\\Services\\MemberService.cs",
+              "RelativeToolTip": "Backend\\Services\\MemberService.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T14:01:42.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BookService.cs",
+              "DocumentMoniker": "D:\\Project\\Digital Library\\Backend\\Backend\\Services\\BookService.cs",
+              "RelativeDocumentMoniker": "Backend\\Services\\BookService.cs",
+              "ToolTip": "D:\\Project\\Digital Library\\Backend\\Backend\\Services\\BookService.cs",
+              "RelativeToolTip": "Backend\\Services\\BookService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T03:36:31.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BookController.cs",
+              "DocumentMoniker": "D:\\Project\\Digital Library\\Backend\\Backend\\Controllers\\BookController.cs",
+              "RelativeDocumentMoniker": "Backend\\Controllers\\BookController.cs",
+              "ToolTip": "D:\\Project\\Digital Library\\Backend\\Backend\\Controllers\\BookController.cs",
+              "RelativeToolTip": "Backend\\Controllers\\BookController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T07:52:46.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Project\\Digital Library\\Backend\\Backend\\Program.cs",
+              "RelativeDocumentMoniker": "Backend\\Program.cs",
+              "ToolTip": "D:\\Project\\Digital Library\\Backend\\Backend\\Program.cs",
+              "RelativeToolTip": "Backend\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T08:11:43.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Member.cs",
+              "DocumentMoniker": "D:\\Project\\Digital Library\\Backend\\Backend\\Models\\Member.cs",
+              "RelativeDocumentMoniker": "Backend\\Models\\Member.cs",
+              "ToolTip": "D:\\Project\\Digital Library\\Backend\\Backend\\Models\\Member.cs",
+              "RelativeToolTip": "Backend\\Models\\Member.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T13:54:05.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Book.cs",
+              "DocumentMoniker": "D:\\Project\\Digital Library\\Backend\\Backend\\Models\\Book.cs",
+              "RelativeDocumentMoniker": "Backend\\Models\\Book.cs",
+              "ToolTip": "D:\\Project\\Digital Library\\Backend\\Backend\\Models\\Book.cs",
+              "RelativeToolTip": "Backend\\Models\\Book.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T03:19:56.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Backend",
+              "DocumentMoniker": "D:\\Project\\Digital Library\\Backend\\Backend\\Backend.csproj",
+              "RelativeDocumentMoniker": "Backend\\Backend.csproj",
+              "ToolTip": "D:\\Project\\Digital Library\\Backend\\Backend\\Backend.csproj",
+              "RelativeToolTip": "Backend\\Backend.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-19T13:37:30.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MemberController.cs",
+              "DocumentMoniker": "D:\\Project\\Digital Library\\Backend\\Backend\\Controllers\\MemberController.cs",
+              "RelativeDocumentMoniker": "Backend\\Controllers\\MemberController.cs",
+              "ToolTip": "D:\\Project\\Digital Library\\Backend\\Backend\\Controllers\\MemberController.cs",
+              "RelativeToolTip": "Backend\\Controllers\\MemberController.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAwwDoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T14:08:52.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IMemberService.cs",
+              "DocumentMoniker": "D:\\Project\\Digital Library\\Backend\\Backend\\Services\\Interfaces\\IMemberService.cs",
+              "RelativeDocumentMoniker": "Backend\\Services\\Interfaces\\IMemberService.cs",
+              "ToolTip": "D:\\Project\\Digital Library\\Backend\\Backend\\Services\\Interfaces\\IMemberService.cs",
+              "RelativeToolTip": "Backend\\Services\\Interfaces\\IMemberService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T13:56:14.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AddBookDto.cs",
+              "DocumentMoniker": "D:\\Project\\Digital Library\\Backend\\Backend\\DTOs\\AddBookDto.cs",
+              "RelativeDocumentMoniker": "Backend\\DTOs\\AddBookDto.cs",
+              "ToolTip": "D:\\Project\\Digital Library\\Backend\\Backend\\DTOs\\AddBookDto.cs",
+              "RelativeToolTip": "Backend\\DTOs\\AddBookDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T04:09:56.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UpdateBookDto.cs",
+              "DocumentMoniker": "D:\\Project\\Digital Library\\Backend\\Backend\\DTOs\\UpdateBookDto.cs",
+              "RelativeDocumentMoniker": "Backend\\DTOs\\UpdateBookDto.cs",
+              "ToolTip": "D:\\Project\\Digital Library\\Backend\\Backend\\DTOs\\UpdateBookDto.cs",
+              "RelativeToolTip": "Backend\\DTOs\\UpdateBookDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T04:29:32.494Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
