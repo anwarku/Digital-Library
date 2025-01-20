@@ -1,0 +1,151 @@
+<c-row ngPreserveWhitespaces>
+  <c-col xs="12">
+    <section class="p-3 rounded-4 bg-white">
+      <div>
+        <c-input-group class="mb-3 w-50">
+          <span cInputGroupText id="basic-addon1">
+            <i class="bi bi-search"></i>
+          </span>
+          <input
+            aria-describedby="basic-addon1"
+            aria-label="Search here"
+            cFormControl
+            placeholder="Search here"
+            [(ngModel)]="searchKeyword"
+            (keyup)="onSearchData()"
+          />
+        </c-input-group>
+      </div>
+      <table [striped]="true" cTable>
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Book Code</th>
+            <th scope="col">Title</th>
+            <th scope="col">Year</th>
+            <th scope="col">Stock</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          @if (isLoad) {
+          <tr>
+            <td colspan="6" class="text-center">
+              <c-spinner></c-spinner>
+            </td>
+          </tr>
+          } @else { @for (book of books; track book.code; let idx=$index) {
+          <tr>
+            <th scope="row">{{ limit * (page - 1) + $index + 1 }}.</th>
+            <td>{{ book.code }}</td>
+            <td>{{ book.title }}</td>
+            <td>{{ book.publishYear }}</td>
+            <td>{{ book.stock }}</td>
+            <td>
+              <button
+                title="Detail Buku"
+                color="primary"
+                cButton
+                class="py-0 px-1 text-white"
+              >
+                <i class="bi bi-eye"></i>
+              </button>
+
+              <button
+                title="Tambah Stok"
+                color="success"
+                cButton
+                class="py-0 px-1 text-white"
+              >
+                <i class="bi bi-plus-square"></i>
+              </button>
+
+              <button
+                title="Hapus Buku"
+                color="danger"
+                cButton
+                class="py-0 px-1 text-white"
+              >
+                <i class="bi bi-trash-fill"></i>
+              </button>
+            </td>
+          </tr>
+          } }
+        </tbody>
+      </table>
+
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex gap-2 align-items-center">
+          <select
+            aria-label="Limit Data"
+            style="width: fit-content"
+            (change)="onSetLimit($event)"
+            cSelect
+          >
+            @for (value of dataLimit; track $index) {
+            <option value="{{ value }}" [selected]="limit == value">
+              {{ value }}
+            </option>
+            }
+          </select>
+
+          <p class="my-auto">Total entries : {{ totalBooks }}</p>
+        </div>
+
+        @if (books.length != 0) {
+        <c-pagination aria-label="Page navigation example">
+          <c-page-item aria-label="Previous" [disabled]="page == 1">
+            <a
+              cPageLink
+              [routerLink]="[]"
+              [queryParams]="{limit, page: page - 1, search: searchKeyword}"
+              ><span aria-hidden="true">&laquo;</span></a
+            >
+          </c-page-item>
+
+          <!-- Previous Number Page -->
+          <c-page-item [disabled]="page == 1">
+            <a
+              cPageLink
+              [routerLink]="[]"
+              [queryParams]="page != 1 ? {limit, page: page - 1, search: searchKeyword}:{limit, page: 1}"
+            >
+              {{ page === 1 ? page : page - 1 }}
+            </a>
+          </c-page-item>
+
+          <!-- Current Number Page -->
+          <c-page-item [disabled]="page == page && page != 1">
+            <a
+              cPageLink
+              [routerLink]="[]"
+              [queryParams]="page != 1 ? {limit, page, search: searchKeyword}:{limit, page: 2}"
+            >
+              {{ page === 1 ? 2 : page }}
+            </a>
+          </c-page-item>
+
+          <!-- Next Number page -->
+          <c-page-item>
+            <a
+              cPageLink
+              [routerLink]="[]"
+              [queryParams]="page != 1 ? {limit, page: page + 1, search: searchKeyword}:{limit, page: 3}"
+            >
+              {{ page === 1 ? 3 : page + 1 }}
+            </a>
+          </c-page-item>
+          <c-page-item aria-label="Next" [disabled]="page == totalPages">
+            <a
+              cPageLink
+              [routerLink]="[]"
+              [queryParams]="{limit, page: page + 1, search: searchKeyword}"
+              ><span aria-hidden="true">&raquo;</span></a
+            >
+          </c-page-item>
+        </c-pagination>
+        }
+      </div>
+    </section>
+  </c-col>
+</c-row>

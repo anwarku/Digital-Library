@@ -10,6 +10,25 @@ export const navItems: INavData[] = [
       text: 'NEW'
     }
   },
+
+  {
+    name: 'Books',
+    url: '/books',
+    iconComponent: { name: 'cil-puzzle' },
+    children: [
+      {
+        name: 'All Books',
+        url: '/books/all-books',
+        icon: 'nav-icon-bullet'
+      },
+      {
+        name: 'Create Book',
+        url: '/books/create',
+        icon: 'nav-icon-bullet'
+      }
+    ]
+  },
+
   {
     title: true,
     name: 'Theme'

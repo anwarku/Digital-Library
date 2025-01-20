@@ -4,9 +4,9 @@ from datetime import datetime as dt
 
 fake = Faker('id_ID')
 
-SERVER = 'LAPTOP-D9H1FM89\\SQLEXPRESS'
+SERVER = 'localhost\\SQLEXPRESS01'
 DATABASE = 'db_library'
-USERNAME = 'LAPTOP-D9H1FM89\\Lenovo'
+USERNAME = 'TSH\\khaeril.anwar'
 PASSWORD = ''
 connection_string = f'DRIVER={{ODBC Driver 17 for SQL Server}};SERVER={SERVER};DATABASE={DATABASE};UID={USERNAME};PWD={PASSWORD};Trusted_Connection=yes;'
 conn = pyodbc.connect(connection_string)
@@ -100,7 +100,7 @@ cursor.execute(query_transaction)
 transactions = cursor.fetchall()
 transaction_ids = [transactions[i][0] for i in range(len(transactions))]
 
-# Mendapatkan data books
+# # Mendapatkan data books
 query_books = "SELECT Code FROM Books"
 cursor.execute(query_books)
 books = cursor.fetchall()

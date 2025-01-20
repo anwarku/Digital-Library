@@ -9,12 +9,12 @@
     "Parameters": [
       {
         "Name": "limit",
-        "Type": "System.String",
+        "Type": "System.Int32",
         "IsRequired": false
       },
       {
         "Name": "skip",
-        "Type": "System.String",
+        "Type": "System.Int32",
         "IsRequired": false
       },
       {
@@ -201,5 +201,45 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend.Controllers.TransactionController",
+    "Method": "GetAllTransactions",
+    "RelativePath": "api/transactions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Backend.Models.Transaction, Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Backend.Controllers.TransactionController",
+    "Method": "GetLastTrancastion",
+    "RelativePath": "api/transactions/last",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Backend.Models.Transaction",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

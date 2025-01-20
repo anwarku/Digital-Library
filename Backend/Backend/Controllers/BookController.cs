@@ -3,6 +3,7 @@ using Backend.Models;
 using Backend.Services.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Backend.Controllers
 {
@@ -18,11 +19,29 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
-        public ActionResult<List<Book>> GetAllBooks([FromQuery] string limit, string skip, string search)
+        public ActionResult<List<Book>> GetAllBooks([FromQuery] int limit = 5, int skip = 0, string search = "")
         {
-            var books = _bookService.GetAllBooks();
-            return Ok(books);
+            var books = _bookService.GetAllBooks(limit, skip, search);
+
+            return Ok(new
+            {
+                limit, skip, total = (search.IsNullOrEmpty()) ? _bookService.CountAllBooks() : _bookService.CountSearchBooks(search), data = books
+            });
         }
+
+        //[HttpGet("search")]
+        //public ActionResult<List<Book>> SearchBooks([FromQuery] string keyword)
+        //{
+        //    var books = _bookService.SearchBooks(keyword);
+        //    int countBooks = _bookService.CountSearchBooks(keyword);
+
+        //    return Ok(
+        //        new
+        //        {
+        //            total = countBooks, data = books
+        //        }
+        //        );
+        //}
 
         [HttpGet("{code}")]
         public ActionResult<Book> GetBookByCode(string code)

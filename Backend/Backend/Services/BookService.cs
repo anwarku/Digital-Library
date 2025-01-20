@@ -3,6 +3,9 @@ using Backend.DTOs;
 using Backend.Models;
 using Backend.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using static Microsoft.Extensions.Logging.EventSource.LoggingEventSource;
+using static System.Reflection.Metadata.BlobBuilder;
 
 namespace Backend.Services
 {
@@ -14,10 +17,31 @@ namespace Backend.Services
             _context = context;
         }
 
-        public List<Book> GetAllBooks()
+        public List<Book> GetAllBooks(int limit, int skip, string search)
         {
-            return _context.Books.ToList();
+            var books = _context.Books.AsQueryable();
+
+            if (!search.IsNullOrEmpty())
+            {
+                books = books.Where
+                    (
+                    b => b.Code.Contains(search) || b.Title.Contains(search)
+                    );
+            }
+
+            books = books.OrderByDescending(b => b.Code).Skip(Math.Abs(skip)).Take(limit);
+
+            return books.ToList();
+
         }
+
+        //public List<Book> SearchBooks(string keyword)
+        //{
+        //    var books = _context.Books
+        //        .Where(b => b.Code.Contains(keyword) || b.Title.Contains(keyword))
+        //        .OrderByDescending(b => b.Code);
+        //    return books.ToList();
+        //}
 
         public Book GetBookByCode(string code)
         {
@@ -63,6 +87,19 @@ namespace Backend.Services
         public bool Exist(string code)
         {
             return _context.Books.Any(b => b.Code == code);
+        }
+
+        public int CountAllBooks()
+        {
+            return _context.Books.Count();
+        }
+        public int CountSearchBooks(string keyword)
+        {
+            var books = _context.Books
+                .Where(b => b.Code.Contains(keyword) || b.Title.Contains(keyword))
+                .OrderByDescending(b => b.Code);
+
+            return books.Count();
         }
 
         private string GenerateBookCode()
