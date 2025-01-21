@@ -17,16 +17,21 @@ namespace Backend.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //base.OnModelCreating(modelBuilder);
-            //modelBuilder.Entity<DetailTransaction>()
-            //    .HasOne(dt => dt.Transaction)
-            //    .WithMany(d => d.DetailTransactions)
-            //    .HasForeignKey(dt => dt.TransactionId);
+            base.OnModelCreating(modelBuilder);
 
-            //modelBuilder.Entity<DetailTransaction>()
-            //    .HasOne(dt => dt.Book)
-            //    .WithMany(b => b.DetailTransactions)
-            //    .HasForeignKey(dt => dt.BookCode);
+            // Relasi One to Many, Transaction to Detail Transactions
+            modelBuilder.Entity<DetailTransaction>()
+                .HasOne(dt => dt.Transaction)
+                .WithMany(d => d.DetailTransactions)
+                .HasForeignKey(dt => dt.TransactionId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            // Relasi One to Many, Book to Detail Transactions
+            modelBuilder.Entity<DetailTransaction>()
+                .HasOne(dt => dt.Book)
+                .WithMany(b => b.DetailTransactions)
+                .HasForeignKey(dt => dt.BookCode)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

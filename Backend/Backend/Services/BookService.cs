@@ -79,6 +79,10 @@ namespace Backend.Services
             var existBook = GetBookByCode(code);
             if (existBook != null)
             {
+                var detailTransactions = _context.DetailTransactions
+                    .Where(dt => dt.BookCode == code)
+                    .ToList();
+
                 _context.Books.Remove(existBook);
                 _context.SaveChanges();
             }

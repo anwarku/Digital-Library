@@ -115,6 +115,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Backend.Controllers.BookController",
+    "Method": "PostTest",
+    "RelativePath": "api/books/test",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addBookDto",
+        "Type": "Backend.DTOs.AddBookDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Backend.Controllers.MemberController",
     "Method": "GetAllBooks",
     "RelativePath": "api/members",

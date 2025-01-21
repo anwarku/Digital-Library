@@ -7,36 +7,35 @@ export const routes: Routes = [
   {
     path: '',
     data: {
-      title: 'Books'
+      title: 'Books',
     },
     children: [
       {
         path: '',
-        redirectTo: 'books',
-        pathMatch: 'full'
+        redirectTo: '/books/all-books',
+        pathMatch: 'full',
       },
       {
         path: 'all-books',
         component: AllBooksComponent,
         data: {
-          title: 'All Books'
-        }
+          title: 'All Books',
+        },
       },
       {
         path: 'create',
         component: CreateBookComponent,
         data: {
-          title: 'Create Book'
-        }
+          title: 'Create Book',
+        },
       },
       {
         path: 'detail/:bookCode',
         component: DetailBookComponent,
         data: {
-          title: 'Create Book'
-        }
+          title: 'Create Book',
+        },
       },
-    ]
-  }
+    ],
+  },
 ];
-

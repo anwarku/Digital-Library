@@ -34,6 +34,10 @@
               <c-spinner></c-spinner>
             </td>
           </tr>
+          } @else { @if (books.length === 0) {
+          <tr>
+            <td colspan="6" class="text-center">There is no data!</td>
+          </tr>
           } @else { @for (book of books; track book.code; let idx=$index) {
           <tr>
             <th scope="row">{{ limit * (page - 1) + $index + 1 }}.</th>
@@ -42,20 +46,22 @@
             <td>{{ book.publishYear }}</td>
             <td>{{ book.stock }}</td>
             <td>
-              <button
+              <a
+                routerLink="/books/detail/{{ book.code }}"
                 title="Detail Buku"
                 color="primary"
                 cButton
                 class="py-0 px-1 text-white"
               >
                 <i class="bi bi-eye"></i>
-              </button>
+              </a>
 
               <button
                 title="Tambah Stok"
                 color="success"
                 cButton
                 class="py-0 px-1 text-white"
+                cModalToggle="newStock{{ book.code }}"
               >
                 <i class="bi bi-plus-square"></i>
               </button>
@@ -65,12 +71,13 @@
                 color="danger"
                 cButton
                 class="py-0 px-1 text-white"
+                (click)="onClickDelete(book.code)"
               >
                 <i class="bi bi-trash-fill"></i>
               </button>
             </td>
           </tr>
-          } }
+          } } }
         </tbody>
       </table>
 
@@ -149,3 +156,21 @@
     </section>
   </c-col>
 </c-row>
+
+@for (book of books; track $index) {
+<c-modal backdrop="static" id="newStock{{ book.code }}" [@.disabled]="true">
+  <c-modal-header>
+    <h5 cModalTitle>Add New Stock</h5>
+    <button cModalToggle="newStock{{ book.code }}" cButtonClose></button>
+  </c-modal-header>
+  <c-modal-body>
+    {{ book.title }}
+  </c-modal-body>
+  <c-modal-footer>
+    <button cModalToggle="newStock{{ book.code }}" cButton color="secondary">
+      Close
+    </button>
+    <button cButton color="primary">Add Stock</button>
+  </c-modal-footer>
+</c-modal>
+}

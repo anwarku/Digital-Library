@@ -76,6 +76,11 @@
         ],
         "requestBody": {
           "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddBookDto"
+              }
+            },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/AddBookDto"
@@ -154,6 +159,11 @@
         ],
         "requestBody": {
           "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateBookDto"
+              }
+            },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateBookDto"
@@ -191,6 +201,42 @@
             }
           }
         ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/books/test": {
+      "post": {
+        "tags": [
+          "Book"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddBookDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddBookDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddBookDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddBookDto"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -241,6 +287,11 @@
         ],
         "requestBody": {
           "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddMemberDto"
+              }
+            },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/AddMemberDto"
@@ -537,9 +588,15 @@
             "type": "string",
             "nullable": true
           },
+          "transaction": {
+            "$ref": "#/components/schemas/Transaction"
+          },
           "bookCode": {
             "type": "string",
             "nullable": true
+          },
+          "book": {
+            "$ref": "#/components/schemas/Book"
           }
         },
         "additionalProperties": false
@@ -593,6 +650,13 @@
           "memberId": {
             "type": "integer",
             "format": "int32"
+          },
+          "detailTransactions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DetailTransaction"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false

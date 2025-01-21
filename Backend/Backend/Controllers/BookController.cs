@@ -68,6 +68,13 @@ namespace Backend.Controllers
             return Created();
         }
 
+        [HttpPost]
+        [Route("test")]
+        public IActionResult PostTest([FromBody] AddBookDto addBookDto)
+        {
+            return Ok(addBookDto);
+        }
+
         [HttpPatch]
         [Route("{code}")]
         public IActionResult UpdateStockBook( string code, [FromBody] UpdateBookDto updateBookDto)

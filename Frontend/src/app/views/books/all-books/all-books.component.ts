@@ -2,13 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import {
-  BadgeComponent,
+  ButtonCloseDirective,
   ButtonDirective,
   ColComponent,
   FormControlDirective,
   FormSelectDirective,
   InputGroupComponent,
   InputGroupTextDirective,
+  ModalBodyComponent,
+  ModalComponent,
+  ModalFooterComponent,
+  ModalHeaderComponent,
+  ModalTitleDirective,
+  ModalToggleDirective,
   PageItemComponent,
   PageLinkDirective,
   PaginationComponent,
@@ -18,6 +24,8 @@ import {
 } from '@coreui/angular';
 import { Book } from '../../../models/book';
 import { BookService } from '../../../services/book.service';
+import Swal from 'sweetalert2';
+import { GlobalService } from '../../../services/global.service';
 
 @Component({
   selector: 'app-all-books',
@@ -36,12 +44,21 @@ import { BookService } from '../../../services/book.service';
     PageLinkDirective,
     ButtonDirective,
     SpinnerComponent,
+    ModalComponent,
+    ModalHeaderComponent,
+    ModalBodyComponent,
+    ModalFooterComponent,
+    ModalToggleDirective,
+    ModalTitleDirective,
+    ButtonCloseDirective,
   ],
   templateUrl: './all-books.component.html',
   styleUrl: './all-books.component.scss',
 })
 export class AllBooksComponent implements OnInit {
   books: Book[] = [];
+  Toast: any;
+  alertMessage: string;
   dataLimit = [5, 10, 20];
   totalBooks: number;
   totalPages: number;
@@ -53,10 +70,23 @@ export class AllBooksComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private bookService: BookService
-  ) {}
+    private bookService: BookService,
+    private globalService: GlobalService
+  ) {
+    // Mendapatkan alert message dari komponen lain
+    const navigation = router.getCurrentNavigation();
+    this.alertMessage = navigation?.extras.state?.['message'];
+  }
 
   ngOnInit(): void {
+    // Mengecek apakah ada alert message
+    if (this.alertMessage) {
+      this.globalService.sweetAlert.fire({
+        icon: 'success',
+        title: this.alertMessage,
+      });
+    }
+
     this.isLoad = true;
     // Digunakan agar user bisa memperbarui data query params langsung di URL
     this.route.queryParams.subscribe((params) => {
@@ -71,11 +101,44 @@ export class AllBooksComponent implements OnInit {
         this.searchKeyword ?? ''
       );
     });
+    this.isLoad = false;
+  }
+
+  onClickDelete(code: string) {
+    // method confirm (bawaan JS) mengembalikan boolean
+    const confirmDelete = confirm('Apakah anda yakin ?');
+
+    // Jika user yakin untuk menghapus data
+    if (confirmDelete) {
+      // Kirim permintaan HTTP ke backend server
+      this.bookService.deleteBookByCode(code).subscribe(
+        // Jika http response success
+        (res: any) => {
+          this.getData();
+          this.globalService.sweetAlert.fire({
+            icon: 'success',
+            title: 'Berhasil hapus data buku',
+          });
+        },
+        // Jika http response error
+        (err: any) => {
+          this.globalService.sweetAlert.fire({
+            icon: 'error',
+            title: 'Gagal hapus data buku',
+          });
+        }
+      );
+    }
   }
 
   onSearchData() {
     this.isLoad = true;
-    this.getData(5, 0, this.searchKeyword);
+    this.router.navigate([], {
+      queryParams: {
+        search: this.searchKeyword,
+      },
+    });
+    this.isLoad = false;
   }
 
   onSetLimit(e: any) {
@@ -91,21 +154,13 @@ export class AllBooksComponent implements OnInit {
     this.getData(newLimit);
   }
 
-  getData(limit: number = 5, page: number = 0, search: string = '') {
+  getData(limit: number = 5, page: number = 1, search: string = '') {
     this.bookService
       .getAllBooks(limit, limit * (page - 1), search)
       .subscribe((res: any) => {
         this.books = res.data;
         this.totalBooks = res.total;
         this.totalPages = Math.ceil(this.totalBooks / limit);
-
-        if (search.length !== 0) {
-          this.router.navigate([], {
-            queryParams: {
-              search: this.searchKeyword,
-            },
-          });
-        }
         this.isLoad = false;
       });
   }

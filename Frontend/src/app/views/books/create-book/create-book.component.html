@@ -1,1 +1,104 @@
-<p>create-book works!</p>
+<c-row>
+  <c-col xs="12" lg="8" [offset]="{ md: 2 }">
+    <h4 class="text-center mb-3">Add new book</h4>
+    <form cForm [formGroup]="newBookForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label cLabel for="title">
+          Book Title
+          <app-required></app-required>
+        </label>
+        <input
+          cFormControl
+          id="title"
+          placeholder="Title of book"
+          type="text"
+          formControlName="title"
+          [valid]="title?.invalid ? false : undefined"
+        />
+
+        <c-form-feedback [valid]="title?.invalid ? false : undefined">
+          @if (title?.hasError('required') || title?.hasError('minlength')) {
+          Judul harus diisi, minimal 6 karakter }
+        </c-form-feedback>
+      </div>
+
+      <div class="mb-3">
+        <label cLabel for="author">
+          Author
+          <app-required></app-required>
+        </label>
+        <input
+          cFormControl
+          id="author"
+          placeholder="Author of book"
+          type="text"
+          formControlName="author"
+          [valid]="author?.invalid ? false : undefined"
+        />
+        <c-form-feedback [valid]="author?.invalid ? false : undefined">
+          @if (author?.hasError('required')) { Pengarang harus diisi }
+        </c-form-feedback>
+      </div>
+
+      <div class="mb-3">
+        <label cLabel for="publisher"> Publisher </label>
+        <input
+          cFormControl
+          id="publisher"
+          placeholder="Publisher of book"
+          type="text"
+          formControlName="publisher"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label cLabel for="publishYear">
+          Publish Year
+          <app-required></app-required>
+        </label>
+        <input
+          cFormControl
+          id="publishYear"
+          placeholder="Publish year of book"
+          type="text"
+          formControlName="publishYear"
+          [valid]="publishYear?.invalid ? false : undefined"
+        />
+        <c-form-feedback [valid]="publishYear?.invalid ? false : undefined">
+          @if (publishYear?.hasError('required')) { Tahun terbit harus diisi }
+        </c-form-feedback>
+      </div>
+
+      <div class="mb-3">
+        <label cLabel for="isbn"> ISBN Book </label>
+        <input
+          cFormControl
+          id="isbn"
+          placeholder="ISBN of book"
+          type="text"
+          formControlName="isbn"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label cLabel for="stock">
+          Stock Book
+          <app-required></app-required>
+        </label>
+        <input
+          cFormControl
+          id="stock"
+          placeholder="Stock of book"
+          type="text"
+          formControlName="stock"
+          [valid]="stock?.invalid ? false : undefined"
+        />
+        <c-form-feedback [valid]="stock?.invalid ? false : undefined">
+          @if (stock?.hasError('required')) { Stock harus diisi }
+        </c-form-feedback>
+      </div>
+
+      <button cButton color="primary" type="submit">Send Book</button>
+    </form>
+  </c-col>
+</c-row>
