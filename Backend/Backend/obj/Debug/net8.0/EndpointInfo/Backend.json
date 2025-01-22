@@ -460,6 +460,42 @@
           }
         }
       }
+    },
+    "/api/users": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRegisterDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRegisterDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRegisterDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRegisterDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -492,7 +528,6 @@
             "format": "int32"
           },
           "isbn": {
-            "minLength": 10,
             "type": "string",
             "nullable": true
           },
@@ -566,13 +601,6 @@
           "createdAt": {
             "type": "string",
             "format": "date-time"
-          },
-          "detailTransactions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/DetailTransaction"
-            },
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -588,15 +616,16 @@
             "type": "string",
             "nullable": true
           },
-          "transaction": {
-            "$ref": "#/components/schemas/Transaction"
-          },
           "bookCode": {
             "type": "string",
             "nullable": true
           },
-          "book": {
-            "$ref": "#/components/schemas/Book"
+          "books": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Book"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -677,6 +706,24 @@
             "minimum": 0,
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserRegisterDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

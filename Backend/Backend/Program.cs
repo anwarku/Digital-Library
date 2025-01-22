@@ -1,7 +1,10 @@
+using System.Text;
 using Backend.Data;
 using Backend.Services;
 using Backend.Services.Interfaces;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +18,30 @@ builder.Services
 builder.Services.AddScoped<IBookService, BookService>();
 builder.Services.AddScoped<IMemberService, MemberService>();
 builder.Services.AddScoped<ITransactionService, TransactionService>();
+builder.Services.AddScoped<IUserService, UserService>();
+
+builder.Services
+    .AddAuthentication( JwtBearerDefaults.AuthenticationScheme )
+    .AddJwtBearer
+    (
+        opt =>
+        {
+            // http, bukan https. dalam kata lain lokal
+            opt.RequireHttpsMetadata = false;
+            // untuk save token
+            opt.SaveToken = true;
+            // setting parameter agar bisa digunakan dalam lingkup lokal/http
+            opt.TokenValidationParameters = new TokenValidationParameters
+            {
+                // Digunakan untuk memvalidasi akses token yang dikirim ke backend
+                // Di validasi berdasrkan KEY yang di generate oleh backend ini
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(builder.Configuration["JwtSettings:Key"])),
+                ValidateIssuer = false,
+                ValidateAudience = false,
+            };
+        }
+    );  
 
 builder.Services.AddControllers().AddNewtonsoftJson();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

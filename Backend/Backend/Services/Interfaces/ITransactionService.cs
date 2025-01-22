@@ -7,7 +7,7 @@ namespace Backend.Services.Interfaces
     {
         List<Transaction> GetAllTransactions();
         Transaction GetTransactionById(string transactionId);
-        Transaction GetLastTransaction();
+        TransactionDto GetLastTransaction();
         void Add(AddTransactionDto addTransactionDto);
     }
 }

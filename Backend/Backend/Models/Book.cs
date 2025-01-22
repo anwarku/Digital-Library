@@ -14,6 +14,6 @@ namespace Backend.Models
         public int Stock { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.Now;
 
-        public ICollection<DetailTransaction> DetailTransactions { get; set; }
+        //public ICollection<DetailTransaction> DetailTransactions { get; set; }
     }
 }

@@ -17,7 +17,7 @@ namespace Backend.DTOs
         [Range(1990, 2025, ErrorMessage ="Tahun terbit antara tahun 1990 sampai 2025")]
         public int PublishYear { get; set; }
 
-        [MinLength(10, ErrorMessage = "ISBN minimal 10 karakter")]
+        //[MinLength(10, ErrorMessage = "ISBN minimal 10 karakter")]
         public string Isbn { get; set; }
 
         [Required(ErrorMessage = "Stok buku harus diisi!")]

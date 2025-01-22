@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import {
   ButtonCloseDirective,
@@ -24,7 +24,6 @@ import {
 } from '@coreui/angular';
 import { Book } from '../../../models/book';
 import { BookService } from '../../../services/book.service';
-import Swal from 'sweetalert2';
 import { GlobalService } from '../../../services/global.service';
 
 @Component({
@@ -57,7 +56,6 @@ import { GlobalService } from '../../../services/global.service';
 })
 export class AllBooksComponent implements OnInit {
   books: Book[] = [];
-  Toast: any;
   alertMessage: string;
   dataLimit = [5, 10, 20];
   totalBooks: number;
@@ -66,6 +64,7 @@ export class AllBooksComponent implements OnInit {
   page: number;
   searchKeyword: string;
   isLoad: boolean = false;
+  newStock: number;
 
   constructor(
     private router: Router,
@@ -104,8 +103,44 @@ export class AllBooksComponent implements OnInit {
     this.isLoad = false;
   }
 
+  onSubmitNewStock(bookCode: string) {
+    // Mengecek apakah stock input berupa angka
+    // Jika input stock bukan angka
+    if (!Number(this.newStock)) {
+      // Kembalikan alert error
+      this.globalService.sweetAlert.fire({
+        icon: 'error',
+        title: 'Pastikan semua inputan sudah benar',
+      });
+      // Jika yang di input stock adalah angka
+    } else {
+      // Melakukan request http ke backend
+      // Untuk melakukan penambahan stock buku
+      this.bookService
+        .updateStockBookByCode(bookCode, Number(this.newStock))
+        .subscribe(
+          // Jika mengembalikan http response success
+          (res: any) => {
+            this.globalService.sweetAlert.fire({
+              icon: 'success',
+              title: 'Berhasil menambahkan stok baru',
+            });
+
+            this.getData();
+          },
+          // Jika mengembalikan http response error
+          (err: any) => {
+            this.globalService.sweetAlert.fire({
+              icon: 'error',
+              title: 'Gagal menambah stok buku, silakam hubungi IT',
+            });
+          }
+        );
+    }
+  }
+
   onClickDelete(code: string) {
-    // method confirm (bawaan JS) mengembalikan boolean
+    // Method confirm (bawaan JS) mengembalikan boolean
     const confirmDelete = confirm('Apakah anda yakin ?');
 
     // Jika user yakin untuk menghapus data
@@ -164,15 +199,4 @@ export class AllBooksComponent implements OnInit {
         this.isLoad = false;
       });
   }
-
-  // searchBooks(keyword: string)
-  // {
-  //   this.bookService.getSearchBooks(keyword)
-  //   .subscribe(
-  //     (res: any) => {
-  //       this.books = res.data
-  //       this.totalBooks = res.total
-  //     }
-  //   )
-  // }
 }

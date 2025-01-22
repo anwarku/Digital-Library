@@ -24,7 +24,7 @@
           <h5 class="mb-1">Publisher</h5>
         </div>
         <p class="mb-1">
-          {{ book?.publisher }}
+          {{ book?.publisher == "" ? "-" : book?.publisher }}
         </p>
       </div>
       <div cListGroupItem>
@@ -32,7 +32,15 @@
           <h5 class="mb-1">ISBN</h5>
         </div>
         <p class="mb-1">
-          {{ book?.isbn }}
+          {{ book?.isbn == "" ? "-" : book?.isbn }}
+        </p>
+      </div>
+      <div cListGroupItem>
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Stock</h5>
+        </div>
+        <p class="mb-1">
+          {{ book?.stock }}
         </p>
       </div>
     </div>

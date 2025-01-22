@@ -45,12 +45,33 @@ namespace Backend.Services
             return _context.Transactions.FirstOrDefault(t => t.Id == transactionId);
         }
 
-        public Transaction GetLastTransaction()
+        public TransactionDto GetLastTransaction()
         {
+            var data = _context.Transactions.Where(t => t.Id == "2025-0004").First();
+            var detailTransactions = _context.DetailTransactions.Where(dt => dt.TransactionId == "2025-0004").ToList();
+
+            var dtoDetailTrans = new List<DetailTransaction>();
+
+            foreach (var item in detailTransactions)
+            {
+                dtoDetailTrans.Add( new DetailTransaction{
+                    TransactionId = item.TransactionId,
+                    BookCode = item.BookCode,
+                    Books= _context.Books.Where(x=> x.Code == item.BookCode).ToList()
+                });
+            }
+
+            var lastTransaction = new TransactionDto{
+                Id = data.Id,
+                BorrowDate = data.BorrowDate,
+                ReturnDate = data.ReturnDate,
+                detailTransactions = dtoDetailTrans
+            };
+            
             var transaction = _context.Transactions
                 .FromSql($"SELECT TOP 1 * FROM Transactions ORDER BY Id DESC")
                 .First();
-            return transaction;
+            return lastTransaction;
         }
 
         public void Add(AddTransactionDto addTransactionDto)

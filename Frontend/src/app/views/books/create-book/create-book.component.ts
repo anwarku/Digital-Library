@@ -100,6 +100,8 @@ export class CreateBookComponent implements OnInit {
       data['publishYear'] = Number(data['publishYear']);
       data['stock'] = Number(data['stock']);
 
+      console.log(data);
+
       // Kirim permintaan HTTP ke backend POST
       this.bookService.storeBook(data).subscribe(
         // Ketika success response
@@ -112,7 +114,12 @@ export class CreateBookComponent implements OnInit {
           });
         },
         // Ketika error response
-        (err: any) => {}
+        (err: any) => {
+          this.globalService.sweetAlert.fire({
+            icon: 'error',
+            title: 'Gagal menambahkan data baru!',
+          });
+        }
       );
     }
   }
