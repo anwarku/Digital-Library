@@ -16,33 +16,68 @@ namespace Backend.Services
             _context = context;
         }
 
-        public List<Transaction> GetAllTransactions()
+        public List<TransactionDto> GetAllTransactions()
         {
-            //var transactions = (from a in _context.Transactions join b in _context.DetailTransactions
-            //                   on a.Id equals b.TrancationId
-            //                    select new
-            //                    {
-            //                        TransactionId = a.Id,
-            //                        DetailTransaction = b.TrancationId
-            //                    }).ToList();
-            var transactions = _context.Transactions
-            .Join(_context.DetailTransactions,
-                  a => a.Id,
-                  b => b.TransactionId,
-                  (a, b) => new
-                  {
-                      Id = a.Id, // Alias b.TransactionId as Id
-                      //TransactionDate = a.TransactionDate, // Include other properties as needed
-                      DetailTransactionId = b.TransactionId,
-                      //BookId = b.BookId // Include other properties as needed
-                  })
-            .ToList();
-            return _context.Transactions.ToList();
+            // Mendefinisikan list transaction dto untuk menyimpan all transaction
+            var allTransactions = new List<TransactionDto>();
+
+            foreach (var transaction in _context.Transactions.ToList())
+            {
+                var detailTransactions = _context.DetailTransactions.Where(dt => dt.TransactionId == transaction.Id).ToList();
+                var dtoDetailTrans = new List<DetailTransactionDto>();
+
+                foreach (var dt in  detailTransactions)
+                {
+                    dtoDetailTrans.Add(new DetailTransactionDto
+                    {
+                        BookCode = dt.BookCode,
+                        TransactionId = dt.TransactionId,
+                        Books = _context.Books.Where(b => b.Code == dt.BookCode).Select(b => new BookTransactionDto { Code = b.Code, Title = b.Title }).First()
+                    });
+                }
+
+                allTransactions.Add(new TransactionDto { Id = transaction.Id, BorrowDate = transaction.BorrowDate, ReturnDate = transaction.ReturnDate, Status = transaction.Status, detailTransactions = dtoDetailTrans });
+            }
+
+            return allTransactions;
         }
 
-        public Transaction GetTransactionById(string transactionId) 
+        //public List<BorrowedTransactionDto> GetBorrowedTransactions()
+        //{
+        //    var borrowedTransaction = _context.Transactions.Where(t => t.Status == "Borrowed");
+        //}
+
+        public TransactionDto GetTransactionById(string transactionId) 
         {
-            return _context.Transactions.FirstOrDefault(t => t.Id == transactionId);
+            var transaction = _context.Transactions.Find(transactionId);
+
+            if (transaction == null)
+            {
+                throw new Exception("Transaction is not found!");
+            }
+
+            var detailTransactions = _context.DetailTransactions.Where(dt => dt.TransactionId == transactionId).ToList();
+            var dtoDetailTrans = new List<DetailTransactionDto>();
+            foreach (var item in detailTransactions)
+            {
+                dtoDetailTrans.Add(new DetailTransactionDto
+                {
+                    TransactionId = item.TransactionId,
+                    BookCode = item.BookCode,
+                    Books = _context.Books.Where(b => b.Code == item.BookCode).Select(b => new BookTransactionDto { Code = b.Code, Title = b.Title}).First(),
+                });
+            }
+
+            var resultTransaction = new TransactionDto
+            {
+                Id = transaction.Id,
+                BorrowDate = transaction.BorrowDate,
+                ReturnDate = transaction.ReturnDate,
+                Status = transaction.Status,
+                detailTransactions = dtoDetailTrans
+            };
+
+            return resultTransaction;
         }
 
         public TransactionDto GetLastTransaction()
@@ -50,14 +85,14 @@ namespace Backend.Services
             var data = _context.Transactions.Where(t => t.Id == "2025-0004").First();
             var detailTransactions = _context.DetailTransactions.Where(dt => dt.TransactionId == "2025-0004").ToList();
 
-            var dtoDetailTrans = new List<DetailTransaction>();
+            var dtoDetailTrans = new List<DetailTransactionDto>();
 
             foreach (var item in detailTransactions)
             {
-                dtoDetailTrans.Add( new DetailTransaction{
+                dtoDetailTrans.Add( new DetailTransactionDto{
                     TransactionId = item.TransactionId,
                     BookCode = item.BookCode,
-                    Books= _context.Books.Where(x=> x.Code == item.BookCode).ToList()
+                    Books = _context.Books.Where(b => b.Code == item.BookCode).Select(b => new BookTransactionDto {Code = b.Code, Title = b.Title }).First(),
                 });
             }
 

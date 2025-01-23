@@ -1,6 +1,7 @@
 ﻿using Backend.DTOs;
 using Backend.Models;
 using Backend.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -19,6 +20,7 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public ActionResult<List<Book>> GetAllBooks([FromQuery] int limit = 5, int skip = 0, string search = "")
         {
             var books = _bookService.GetAllBooks(limit, skip, search);

@@ -1,4 +1,5 @@
-﻿using Backend.Models;
+﻿using Backend.DTOs;
+using Backend.Models;
 using Backend.Services.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -21,6 +22,22 @@ namespace Backend.Controllers
         {
             var allTransactions = _transactionService.GetAllTransactions();
             return Ok(allTransactions);
+        }
+
+        [HttpGet]
+        [Route("{transactionId}")]
+        public ActionResult<TransactionDto> GetTransaction(string transactionId)
+        {
+            try
+            {
+                var data = _transactionService.GetTransactionById(transactionId);
+                return Ok(data);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
         }
 
         [HttpGet]

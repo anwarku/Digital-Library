@@ -7,6 +7,7 @@ namespace Backend.DTOs
         public string Id { get; set; }
         public DateOnly BorrowDate { get; set; }
         public DateOnly? ReturnDate { get; set; }
-        public List<DetailTransaction> detailTransactions { get; set; }
+        public string Status { get; set; }
+        public List<DetailTransactionDto> detailTransactions { get; set; }
     }
 }

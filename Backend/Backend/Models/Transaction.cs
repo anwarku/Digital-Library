@@ -11,6 +11,6 @@ namespace Backend.Models
         public string Status { get; set; }
         public int MemberId {  get; set; }
 
-        public ICollection<DetailTransaction> DetailTransactions { get; set; }
+        //public ICollection<DetailTransaction> DetailTransactions { get; set; }
     }
 }

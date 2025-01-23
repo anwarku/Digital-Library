@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+using Backend.DTOs;
 
 namespace Backend.Models
 {
@@ -10,7 +11,6 @@ namespace Backend.Models
 
         public string BookCode { get; set; }
         //public Book Book { get; set; }
-        [NotMapped]
-        public List<Book> Books { get; set; }
+        
     }
 }

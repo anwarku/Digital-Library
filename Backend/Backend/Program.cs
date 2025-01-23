@@ -1,5 +1,7 @@
 using System.Text;
+using AutoMapper;
 using Backend.Data;
+using Backend.Mapper;
 using Backend.Services;
 using Backend.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -14,6 +16,7 @@ builder.Services
     {
         options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
     });
+builder.Services.AddControllers().AddNewtonsoftJson();
 
 builder.Services.AddScoped<IBookService, BookService>();
 builder.Services.AddScoped<IMemberService, MemberService>();
@@ -41,9 +44,16 @@ builder.Services
                 ValidateAudience = false,
             };
         }
-    );  
+    );
 
-builder.Services.AddControllers().AddNewtonsoftJson();
+// Auto Mapper
+builder.Services.AddAutoMapper(typeof(Program).Assembly);
+builder.Services.AddScoped<IMapper>(mp =>
+{
+    return new Mapper(AutoMapperConfig.RegisterMappings());
+});
+builder.Services.AddSingleton(AutoMapperConfig.RegisterMappings());
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

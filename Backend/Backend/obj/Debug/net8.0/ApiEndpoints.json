@@ -240,6 +240,32 @@
   },
   {
     "ContainingType": "Backend.Controllers.TransactionController",
+    "Method": "GetTransaction",
+    "RelativePath": "api/transactions/{transactionId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "transactionId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Backend.DTOs.TransactionDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Backend.Controllers.TransactionController",
     "Method": "GetLastTrancastion",
     "RelativePath": "api/transactions/last",
     "HttpMethod": "GET",
@@ -269,6 +295,22 @@
       {
         "Name": "userRegisterDto",
         "Type": "Backend.DTOs.UserRegisterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend.Controllers.UserController",
+    "Method": "LoginUser",
+    "RelativePath": "api/users/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userLoginDto",
+        "Type": "Backend.DTOs.UserLoginDto",
         "IsRequired": true
       }
     ],
