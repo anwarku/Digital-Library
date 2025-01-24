@@ -1,14 +1,16 @@
 ﻿using Backend.DTOs;
-using Backend.Models;
 
 namespace Backend.Services.Interfaces
 {
     public interface ITransactionService
     {
         List<TransactionDto> GetAllTransactions();
-        //BorrowedTransactionDto GetBorrowedTransactions();
+        List<BorrowedTransactionDto> GetBorrowedTransactions(int skip, int limit, string search);
         TransactionDto GetTransactionById(string transactionId);
         TransactionDto GetLastTransaction();
         void Add(AddTransactionDto addTransactionDto);
+        void UpdateStatus(string transactionId);
+        int CountBorrowedTransactions();
+        int CountBorrowedSearchTransactions(string search);
     }
 }

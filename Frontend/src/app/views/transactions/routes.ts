@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
-import { AllTransactionComponent } from './all-transaction/all-transaction.component';
 import { CreateTransactionComponent } from './create-transaction/create-transaction.component';
+import { BorrowedTransactionsComponent } from './borrowed-transactions/borrowed-transactions.component';
+import { DetailTransactionComponent } from './detail-transaction/detail-transaction.component';
 
 export const routes: Routes = [
   {
@@ -11,14 +12,21 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: '/transactions/all-transactions',
+        redirectTo: '/transactions/borrowed',
         pathMatch: 'full',
       },
       {
-        path: 'all-transactions',
-        component: AllTransactionComponent,
+        path: 'borrowed',
+        component: BorrowedTransactionsComponent,
         data: {
-          title: 'All Transactions',
+          title: 'Borrowed Transactions',
+        },
+      },
+      {
+        path: 'detail/:idTransaction',
+        component: DetailTransactionComponent,
+        data: {
+          title: 'Detail Transaction',
         },
       },
       {

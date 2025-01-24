@@ -266,6 +266,63 @@
   },
   {
     "ContainingType": "Backend.Controllers.TransactionController",
+    "Method": "UpdateStatus",
+    "RelativePath": "api/transactions/{transactionId}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "transactionId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateStatusTransactionDto",
+        "Type": "Backend.DTOs.UpdateStatusTransactionDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend.Controllers.TransactionController",
+    "Method": "GetBorrowedTransactions",
+    "RelativePath": "api/transactions/borrowed",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "skip",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "limit",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "search",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Backend.DTOs.BorrowedTransactionDto, Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Backend.Controllers.TransactionController",
     "Method": "GetLastTrancastion",
     "RelativePath": "api/transactions/last",
     "HttpMethod": "GET",

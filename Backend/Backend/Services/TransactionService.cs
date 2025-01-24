@@ -1,4 +1,5 @@
-﻿using Backend.Data;
+﻿using AutoMapper;
+using Backend.Data;
 using Backend.DTOs;
 using Backend.Models;
 using Backend.Services.Interfaces;
@@ -10,10 +11,12 @@ namespace Backend.Services
     public class TransactionService : ITransactionService
     {
         private readonly ApplicationDbContext _context;
+        private readonly IMapper _mapper;
 
-        public TransactionService(ApplicationDbContext context)
+        public TransactionService(ApplicationDbContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         public List<TransactionDto> GetAllTransactions()
@@ -42,10 +45,34 @@ namespace Backend.Services
             return allTransactions;
         }
 
-        //public List<BorrowedTransactionDto> GetBorrowedTransactions()
-        //{
-        //    var borrowedTransaction = _context.Transactions.Where(t => t.Status == "Borrowed");
-        //}
+        public List<BorrowedTransactionDto> GetBorrowedTransactions(int skip, int limit, string search)
+        {
+            //var borrowedTransaction = _context.Transactions.Where(t => t.Status == "Borrowed").Select(_mapper.Map<BorrowedTransactionDto>);
+
+
+            var borrowedTransactionDto = new List<BorrowedTransactionDto>();
+            var borrowedTransaction = _context.Transactions
+                .Where(t => t.Status == "Borrowed")
+                .Where(t => t.Id.Contains(search))
+                .OrderByDescending(t => t.Id)
+                .Skip(Math.Abs(skip))
+                .Take(limit)
+                .ToList();
+
+            foreach (var transaction in borrowedTransaction)
+            {
+                borrowedTransactionDto.Add(new BorrowedTransactionDto 
+                {
+                    Id = transaction.Id,
+                    MemberName = _context.Members.First(m => m.Id == transaction.MemberId).Name,
+                    BorrowDate = transaction.BorrowDate,
+                    Status = transaction.Status,
+                }
+                );
+            }
+
+            return borrowedTransactionDto;
+        }
 
         public TransactionDto GetTransactionById(string transactionId) 
         {
@@ -71,6 +98,7 @@ namespace Backend.Services
             var resultTransaction = new TransactionDto
             {
                 Id = transaction.Id,
+                MemberName = _context.Members.First(m => m.Id == transaction.MemberId).Name,
                 BorrowDate = transaction.BorrowDate,
                 ReturnDate = transaction.ReturnDate,
                 Status = transaction.Status,
@@ -114,6 +142,33 @@ namespace Backend.Services
             var transaction = new Transaction
             {
             };
+        }
+
+        public void UpdateStatus(string transactionId)
+        {
+            var existTransaction = _context.Transactions.Find(transactionId);
+            if (existTransaction != null && existTransaction.Status == "Borrowed") 
+            {
+                existTransaction.Status = "Returned";
+                existTransaction.ReturnDate = DateOnly.FromDateTime(DateTime.Now);
+                _context.SaveChanges();
+            }
+        }
+
+        public int CountBorrowedTransactions()
+        {
+            return _context.Transactions
+                .Where(t => t.Status == "Borrowed")
+                .Count(); 
+        }
+
+        public int CountBorrowedSearchTransactions(string search)
+        {
+            var data = _context.Transactions
+                .Where(t => t.Id.Contains(search) && t.Status == "Borrowed")
+                .ToList();
+
+            return data.Count();
         }
     }
 }

@@ -37,6 +37,22 @@ namespace Backend.Controllers
             return Ok(member);
         }
 
+        [HttpGet]
+        [Route("check/{id:int}")]
+        public ActionResult<MemberCheckDto> GetMemberCheck(int id)
+        {
+            try
+            {
+                var memberCheck = _memberService.GetMemberCheckById(id);
+
+                return Ok(memberCheck);
+            }
+            catch (Exception ex) 
+            {
+                return BadRequest(new {Message = ex.Message });
+            }
+        }
+
         [HttpPost]
         public ActionResult<Member> StoreMember([FromBody] AddMemberDto addMemberDto)
         {

@@ -13,6 +13,7 @@ namespace Backend.Mapper
         public DtoToEfMappingProfile() 
         {
             CreateMap<BorrowedTransactionDto, Transaction>();
+            CreateMap<MemberCheckDto, Member>();
         }
     }
 
@@ -21,6 +22,7 @@ namespace Backend.Mapper
         public EfToDtoMappingProfile() 
         {
             CreateMap<Transaction, BorrowedTransactionDto>();
+            CreateMap<Member, MemberCheckDto>();
         }
     }
 }

@@ -19,6 +19,7 @@ import {
 } from '@coreui/angular';
 
 import { IconDirective } from '@coreui/icons-angular';
+import { UserService } from '../../../services/user.service';
 
 @Component({
   selector: 'app-default-header',
@@ -58,16 +59,14 @@ export class DefaultHeaderComponent extends HeaderComponent {
     );
   });
 
-  constructor(private router: Router) {
+  constructor(private userService: UserService) {
     super();
   }
 
   nameCurrentUser = localStorage.getItem('name');
 
   userLogout() {
-    localStorage.removeItem('token');
-    localStorage.removeItem('name');
-    this.router.navigate(['/login']);
+    this.userService.userLogout();
   }
 
   sidebarId = input('sidebar1');

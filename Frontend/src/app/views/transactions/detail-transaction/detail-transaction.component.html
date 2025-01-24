@@ -1,0 +1,84 @@
+<c-row>
+  <c-col xxl="8" [offset]="{ xxl: 2 }">
+    @if (!isLoad) {
+    <c-card>
+      <c-card-header class="d-flex justify-content-between align-items-center">
+        <h5>ID : {{ transaction.id }}</h5>
+        <button
+          (click)="onReturned(transaction.id)"
+          type="button"
+          cButton
+          color="secondary"
+        >
+          Is Returned ?
+        </button>
+      </c-card-header>
+      <c-card-body>
+        <table [bordered]="true" cTable>
+          <tr>
+            <td class="py-2"># Member Name</td>
+            <td class="px-2">:</td>
+            <td>{{ transaction.memberName }}</td>
+          </tr>
+          <tr>
+            <td class="py-2"># Borrow Date</td>
+            <td class="px-2">:</td>
+            <td>{{ transaction.borrowDate | date : "EEEE, dd MMMM y" }}</td>
+          </tr>
+          <tr>
+            <td class="py-2"># Return Date</td>
+            <td class="px-2">:</td>
+            <td
+              [ngClass]="{
+                'text-danger': transaction.returnDate == null
+              }"
+            >
+              {{
+                transaction.returnDate === null
+                  ? "Not Returned Yet"
+                  : (transaction.returnDate | date : "EEEE, dd MMMM y")
+              }}
+            </td>
+          </tr>
+          <tr>
+            <td class="py-2"># Status</td>
+            <td class="px-2">:</td>
+            <td>
+              <c-badge
+                class="text-white"
+                [color]="
+                  transaction.status == 'Borrowed' ? 'warning' : 'success'
+                "
+                >{{ transaction.status }}</c-badge
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="py-2"># Books</td>
+            <td class="px-2">:</td>
+            <td>
+              <ol class="ms-2 my-auto">
+                @for (dt of transaction.detailTransactions; track $index) {
+                <li>{{ dt.books.code }} - {{ dt.books.title }}</li>
+                }
+              </ol>
+            </td>
+          </tr>
+        </table>
+
+        <a
+          [routerLink]="
+            transaction.status == 'Borrowed'
+              ? ['/transactions', 'borrowed']
+              : ['/transactions', 'history']
+          "
+          cButton
+          color="primary"
+          >Back to @if (transaction.status == 'Borrowed') { Borrowed Transaction
+          } @else { History Transaction }
+        </a>
+      </c-card-body>
+    </c-card>
+    }
+  </c-col>
+</c-row>

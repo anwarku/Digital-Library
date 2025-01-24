@@ -12,11 +12,12 @@ import {
   SidebarHeaderComponent,
   SidebarNavComponent,
   SidebarToggleDirective,
-  SidebarTogglerDirective
+  SidebarTogglerDirective,
 } from '@coreui/angular';
 
 import { DefaultFooterComponent, DefaultHeaderComponent } from './';
 import { navItems } from './_nav';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 function isOverflown(element: HTMLElement) {
   return (
@@ -26,26 +27,27 @@ function isOverflown(element: HTMLElement) {
 }
 
 @Component({
-    selector: 'app-dashboard',
-    templateUrl: './default-layout.component.html',
-    styleUrls: ['./default-layout.component.scss'],
-    imports: [
-        SidebarComponent,
-        SidebarHeaderComponent,
-        SidebarBrandComponent,
-        RouterLink,
-        IconDirective,
-        NgScrollbar,
-        SidebarNavComponent,
-        SidebarFooterComponent,
-        SidebarToggleDirective,
-        SidebarTogglerDirective,
-        DefaultHeaderComponent,
-        ShadowOnScrollDirective,
-        ContainerComponent,
-        RouterOutlet,
-        DefaultFooterComponent
-    ]
+  selector: 'app-dashboard',
+  templateUrl: './default-layout.component.html',
+  styleUrls: ['./default-layout.component.scss'],
+  imports: [
+    SidebarComponent,
+    SidebarHeaderComponent,
+    SidebarBrandComponent,
+    RouterLink,
+    IconDirective,
+    NgScrollbar,
+    SidebarNavComponent,
+    SidebarFooterComponent,
+    SidebarToggleDirective,
+    SidebarTogglerDirective,
+    DefaultHeaderComponent,
+    ShadowOnScrollDirective,
+    ContainerComponent,
+    RouterOutlet,
+    DefaultFooterComponent,
+    NgxSpinnerModule,
+  ],
 })
 export class DefaultLayoutComponent {
   public navItems = navItems;

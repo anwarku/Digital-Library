@@ -35,13 +35,13 @@ export const navItems: INavData[] = [
     iconComponent: { name: 'cil-puzzle' },
     children: [
       {
-        name: 'All Transactions',
-        url: '/transactions/all-transactions',
+        name: 'Add New',
+        url: '/transactions/create',
         icon: 'nav-icon-bullet',
       },
       {
-        name: 'New Transaction',
-        url: '/transactions/create',
+        name: 'Borrowed',
+        url: '/transactions/borrowed',
         icon: 'nav-icon-bullet',
       },
     ],

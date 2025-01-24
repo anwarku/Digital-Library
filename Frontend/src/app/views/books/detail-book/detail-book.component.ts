@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import {
+  ButtonDirective,
   ColComponent,
   ListGroupDirective,
   ListGroupItemDirective,
   RowComponent,
 } from '@coreui/angular';
 import { BookService } from '../../../services/book.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Book } from '../../../models/book';
 
 @Component({
@@ -16,6 +17,8 @@ import { Book } from '../../../models/book';
     ColComponent,
     ListGroupDirective,
     ListGroupItemDirective,
+    ButtonDirective,
+    RouterLink,
   ],
   templateUrl: './detail-book.component.html',
   styleUrl: './detail-book.component.scss',

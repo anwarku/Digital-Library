@@ -20,6 +20,7 @@ import { BookService } from '../../../services/book.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GlobalService } from '../../../services/global.service';
 import { NgIf } from '@angular/common';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-create-book',
@@ -46,7 +47,8 @@ export class CreateBookComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private bookService: BookService,
-    private globalService: GlobalService
+    private globalService: GlobalService,
+    private spinner: NgxSpinnerService
   ) {}
 
   ngOnInit(): void {
@@ -85,6 +87,7 @@ export class CreateBookComponent implements OnInit {
 
   // Function untuk handling tambah data
   onSubmit() {
+    this.spinner.show();
     // Mengecek apakah validasi sudah sukses
     // Jika belum valid, kasih alert
     if (!this.newBookForm.valid) {
@@ -100,13 +103,14 @@ export class CreateBookComponent implements OnInit {
       data['publishYear'] = Number(data['publishYear']);
       data['stock'] = Number(data['stock']);
 
-      console.log(data);
+      // console.log(data);
 
       // Kirim permintaan HTTP ke backend POST
       this.bookService.storeBook(data).subscribe(
         // Ketika success response
         (res: any) => {
-          this.newBookForm.reset();
+          this.spinner.hide();
+          // this.newBookForm.reset();
           this.router.navigate(['/books', 'all-books'], {
             state: {
               message: 'Berhasil menambahkan buku baru',

@@ -39,7 +39,7 @@ namespace Backend.Services
         public string UserLogin(UserLoginDto userLoginDto)
         {
             var passwordHasher = new PasswordHasher<object>();
-            var user = _context.Users.FirstOrDefault(u => u.UserName == userLoginDto.UserName);
+            var user = _context.Users.FirstOrDefault(u => u.UserName.ToLower().Trim() == userLoginDto.UserName.ToLower().Trim());
             //var user = _context.Users.First(u => u.UserName == userLoginDto.UserName);
             var verificatonResult = passwordHasher.VerifyHashedPassword(null, user.Password, userLoginDto.Password);
 
@@ -84,7 +84,8 @@ namespace Backend.Services
             var key = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(_configuration["JwtSettings:Key"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
-            var token = new JwtSecurityToken(claims: claims, expires: DateTime.Now.AddHours(12), signingCredentials: creds);
+            //var token = new JwtSecurityToken(claims: claims, expires: DateTime.Now.AddMinutes(5), signingCredentials: creds);
+            var token = new JwtSecurityToken(claims: claims, expires: DateTime.Now.AddHours(5), signingCredentials: creds);
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }

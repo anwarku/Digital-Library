@@ -1,1 +1,52 @@
-<p>create-transaction works!</p>
+<c-row>
+  <c-col xl="8" [offset]="{ xl: 2 }">
+    <section class="bg-white rounded-3 p-4">
+      <h3 class="text-center mb-4">New Borrowing Books</h3>
+      <!-- <form cForm> -->
+      <c-input-group class="mb-3">
+        <input
+          aria-describedby="input-member-id"
+          aria-label="Input Member ID"
+          class="bg-light"
+          cFormControl
+          [(ngModel)]="memberId"
+          placeholder="Input Member ID"
+        />
+        <button
+          cButton
+          color="info"
+          id="input-member-id"
+          type="button"
+          class="text-white"
+          (click)="onCheckMember()"
+        >
+          Check
+        </button>
+      </c-input-group>
+
+      <h6 class="ms-1">Member Data :</h6>
+      <input
+        aria-label="Member Name"
+        cFormControl
+        disabled
+        [(ngModel)]="memberName"
+        [value]="memberName"
+        placeholder="Member Name"
+        type="text"
+        class="mb-3"
+      />
+
+      <input
+        aria-label="Member Phone"
+        cFormControl
+        disabled
+        [(ngModel)]="memberPhone"
+        [value]="memberPhone"
+        placeholder="Member Phone"
+        type="text"
+        class="mb-3"
+      />
+      <!-- </form> -->
+    </section>
+  </c-col>
+</c-row>

@@ -7,6 +7,7 @@ namespace Backend.Services.Interfaces
     {
         List<Member> GetAllMembers();
         Member GetMemberById(int id);
+        MemberCheckDto GetMemberCheckById(int id);
         void Add(AddMemberDto addMemberDto);
         void Delete(int id);
         bool Exist(int id);
