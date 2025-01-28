@@ -33,6 +33,12 @@ export const routes: Routes = [
           import('./views/books/routes').then((m) => m.routes),
       },
       {
+        canActivate: [authGuard],
+        path: 'members',
+        loadChildren: () =>
+          import('./views/members/routes').then((m) => m.routes),
+      },
+      {
         path: 'theme',
         loadChildren: () =>
           import('./views/theme/routes').then((m) => m.routes),

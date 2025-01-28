@@ -44,6 +44,29 @@ export const navItems: INavData[] = [
         url: '/transactions/borrowed',
         icon: 'nav-icon-bullet',
       },
+      {
+        name: 'History',
+        url: '/transactions/history',
+        icon: 'nav-icon-bullet',
+      },
+    ],
+  },
+
+  {
+    name: 'Members',
+    url: '/members',
+    iconComponent: { name: 'cil-puzzle' },
+    children: [
+      {
+        name: 'Add New',
+        url: '/members/create',
+        icon: 'nav-icon-bullet',
+      },
+      {
+        name: 'Search',
+        url: '/members/search',
+        icon: 'nav-icon-bullet',
+      },
     ],
   },
 

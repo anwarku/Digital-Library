@@ -20,6 +20,16 @@ export class TransactionService {
     });
   }
 
+  getReturnedTransactions(limit: number, skip: number, search: string) {
+    return this.http.get<any>(this.baseUrl + 'transactions/returned', {
+      params: {
+        limit,
+        skip,
+        search,
+      },
+    });
+  }
+
   getTransactionById(idTransaction: string) {
     return this.http.get<any>(this.baseUrl + `transactions/${idTransaction}`);
   }
@@ -29,5 +39,9 @@ export class TransactionService {
       this.baseUrl + `transactions/${idTransaction}`,
       { id: idTransaction }
     );
+  }
+
+  addNewTransaction(data: any) {
+    return this.http.post<any>(this.baseUrl + 'transactions', data);
   }
 }

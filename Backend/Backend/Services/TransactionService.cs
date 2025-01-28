@@ -47,9 +47,6 @@ namespace Backend.Services
 
         public List<BorrowedTransactionDto> GetBorrowedTransactions(int skip, int limit, string search)
         {
-            //var borrowedTransaction = _context.Transactions.Where(t => t.Status == "Borrowed").Select(_mapper.Map<BorrowedTransactionDto>);
-
-
             var borrowedTransactionDto = new List<BorrowedTransactionDto>();
             var borrowedTransaction = _context.Transactions
                 .Where(t => t.Status == "Borrowed")
@@ -72,6 +69,33 @@ namespace Backend.Services
             }
 
             return borrowedTransactionDto;
+        }
+
+        public List<ReturnedTransactionDto> GetReturnedTransactions(int skip, int limit, string search)
+        {
+            var returnedTransactionDto = new List<ReturnedTransactionDto>();
+            var returnedTransaction = _context.Transactions
+                .Where(t => t.Status == "Returned")
+                .Where(t => t.Id.Contains(search))
+                .OrderByDescending(t => t.Id)
+                .Skip(Math.Abs(skip))
+                .Take(limit)
+                .ToList();
+
+            foreach (var transaction in returnedTransaction)
+            {
+                returnedTransactionDto.Add(new ReturnedTransactionDto
+                {
+                    Id = transaction.Id,
+                    MemberName = _context.Members.First(m => m.Id == transaction.MemberId).Name,
+                    BorrowDate = transaction.BorrowDate,
+                    ReturnDate = transaction.ReturnDate.HasValue ? transaction.ReturnDate.Value : default(DateOnly),
+                    Status = transaction.Status,
+                }
+                );
+            }
+
+            return returnedTransactionDto;
         }
 
         public TransactionDto GetTransactionById(string transactionId) 
@@ -139,9 +163,44 @@ namespace Backend.Services
 
         public void Add(AddTransactionDto addTransactionDto)
         {
-            var transaction = new Transaction
+            using var transaction = _context.Database.BeginTransaction();
+
+            try
             {
-            };
+                string newTransactionId = GenerateTransactionId();
+
+                var newTransaction = new Transaction
+                {
+                    Id = newTransactionId,
+                    BorrowDate = DateOnly.FromDateTime(DateTime.Now),
+                    Status = "Borrowed",
+                    MemberId = addTransactionDto.MemberId
+                };
+
+                _context.Transactions.Add(newTransaction);
+                _context.SaveChanges();
+
+                foreach (var bookCode in addTransactionDto.Books)
+                {
+                    var newDetailTransaction = new DetailTransaction
+                    {
+                        BookCode = bookCode,
+                        TransactionId = newTransactionId
+                    };
+
+                    _context.DetailTransactions.Add(newDetailTransaction);
+                    _context.SaveChanges();
+                }
+
+                transaction.Commit();
+
+            }
+            catch (Exception e)
+            {
+                transaction.Rollback();
+                throw new Exception(e.Message);
+            }
+
         }
 
         public void UpdateStatus(string transactionId)
@@ -162,6 +221,13 @@ namespace Backend.Services
                 .Count(); 
         }
 
+        public int CountReturnedTransactions()
+        { 
+            return _context.Transactions
+                .Where(t => t.Status == "Returned")
+                .Count();
+        }
+
         public int CountBorrowedSearchTransactions(string search)
         {
             var data = _context.Transactions
@@ -169,6 +235,26 @@ namespace Backend.Services
                 .ToList();
 
             return data.Count();
+        }
+
+        public int CountReturnedSearchTransactions(string search)
+        {
+            var data = _context.Transactions
+                .Where(t => t.Id.Contains(search) && t.Status == "Returned")
+                .ToList();
+            return data.Count();
+        }
+
+        private string GenerateTransactionId()
+        {
+            var lastTransaction = _context.Transactions
+                .FromSql($"SELECT TOP 1 * FROM Transactions ORDER BY Id DESC")
+                .First();
+            var lastId = lastTransaction.Id;
+            var lastNumber = int.Parse(lastId.Split("-")[1]);
+            var newNumber = lastNumber + 1;
+            var newId = $"2025-{newNumber.ToString("D4")}";
+            return newId;
         }
     }
 }

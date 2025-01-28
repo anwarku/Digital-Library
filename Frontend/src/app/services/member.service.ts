@@ -13,4 +13,8 @@ export class MemberService {
   getMemberById(memberId: number) {
     return this.http.get<any>(this.baseUrl + `members/${memberId}`);
   }
+
+  checkMemberById(memberId: number) {
+    return this.http.get<any>(this.baseUrl + `members/check/${memberId}`);
+  }
 }

@@ -1,105 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Latihan\\Digital-Library\\Backend\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\latihan\\digital-library\\backend\\backend\\controllers\\membercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\membercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\latihan\\digital-library\\backend\\backend\\services\\memberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\services\\memberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\latihan\\digital-library\\backend\\backend\\dtos\\membercheckdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\dtos\\membercheckdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\latihan\\digital-library\\backend\\backend\\services\\interfaces\\imemberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\services\\interfaces\\imemberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\latihan\\digital-library\\backend\\backend\\mapper\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\mapper\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "D:\\Project\\Digital Library\\Backend\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 4,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Mapper\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "Backend\\Mapper\\MappingProfile.cs",
-              "ToolTip": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Mapper\\MappingProfile.cs",
-              "RelativeToolTip": "Backend\\Mapper\\MappingProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T09:41:50.805Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MemberService.cs",
-              "DocumentMoniker": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Services\\MemberService.cs",
-              "RelativeDocumentMoniker": "Backend\\Services\\MemberService.cs",
-              "ToolTip": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Services\\MemberService.cs",
-              "RelativeToolTip": "Backend\\Services\\MemberService.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBwAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T09:41:22.525Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MemberCheckDto.cs",
-              "DocumentMoniker": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\DTOs\\MemberCheckDto.cs",
-              "RelativeDocumentMoniker": "Backend\\DTOs\\MemberCheckDto.cs",
-              "ToolTip": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\DTOs\\MemberCheckDto.cs",
-              "RelativeToolTip": "Backend\\DTOs\\MemberCheckDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T09:40:19.826Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IMemberService.cs",
-              "DocumentMoniker": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Services\\Interfaces\\IMemberService.cs",
-              "RelativeDocumentMoniker": "Backend\\Services\\Interfaces\\IMemberService.cs",
-              "ToolTip": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Services\\Interfaces\\IMemberService.cs",
-              "RelativeToolTip": "Backend\\Services\\Interfaces\\IMemberService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T09:35:13.07Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MemberController.cs",
-              "DocumentMoniker": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Controllers\\MemberController.cs",
-              "RelativeDocumentMoniker": "Backend\\Controllers\\MemberController.cs",
-              "ToolTip": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Controllers\\MemberController.cs",
-              "RelativeToolTip": "Backend\\Controllers\\MemberController.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAwwC8AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T09:32:22.727Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

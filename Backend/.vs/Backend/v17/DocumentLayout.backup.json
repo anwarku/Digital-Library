@@ -1,42 +1,78 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Latihan\\Digital-Library\\Backend\\",
+  "WorkspaceRootPath": "D:\\Project\\Digital Library\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\latihan\\digital-library\\backend\\backend\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\latihan\\digital-library\\backend\\backend\\controllers\\transactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\transactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\latihan\\digital-library\\backend\\backend\\services\\transactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\project\\digital library\\backend\\backend\\services\\transactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\services\\transactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\latihan\\digital-library\\backend\\backend\\services\\interfaces\\itransactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\project\\digital library\\backend\\backend\\controllers\\transactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\transactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\project\\digital library\\backend\\backend\\services\\interfaces\\itransactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\services\\interfaces\\itransactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\latihan\\digital-library\\backend\\backend\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\project\\digital library\\backend\\backend\\dtos\\returnedtransactiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\dtos\\returnedtransactiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\latihan\\digital-library\\backend\\backend\\dtos\\updatestatustransactiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\dtos\\updatestatustransactiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\project\\digital library\\backend\\backend\\dtos\\membercheckdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\dtos\\membercheckdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\latihan\\digital-library\\backend\\backend\\dtos\\borrowedtransactiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\dtos\\borrowedtransactiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\project\\digital library\\backend\\backend\\models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\latihan\\digital-library\\backend\\backend\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\project\\digital library\\backend\\backend\\dtos\\addtransactiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\dtos\\addtransactiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\latihan\\digital-library\\backend\\backend\\dtos\\transactiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\dtos\\transactiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\project\\digital library\\backend\\backend\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\project\\digital library\\backend\\backend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\project\\digital library\\backend\\backend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\project\\digital library\\backend\\backend\\models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\project\\digital library\\backend\\backend\\models\\detailtransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\models\\detailtransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\project\\digital library\\backend\\backend\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\project\\digital library\\backend\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\project\\digital library\\backend\\backend\\controllers\\membercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\membercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\project\\digital library\\backend\\backend\\services\\memberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\services\\memberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\project\\digital library\\backend\\backend\\services\\interfaces\\imemberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\services\\interfaces\\imemberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\project\\digital library\\backend\\backend\\mapper\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\mapper\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,126 +86,225 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BookController.cs",
-              "DocumentMoniker": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Controllers\\BookController.cs",
-              "RelativeDocumentMoniker": "Backend\\Controllers\\BookController.cs",
-              "ToolTip": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Controllers\\BookController.cs",
-              "RelativeToolTip": "Backend\\Controllers\\BookController.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAiwF4AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 17,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "D:\\Project\\Digital Library\\Backend\\Backend\\Mapper\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "Backend\\Mapper\\MappingProfile.cs",
+              "ToolTip": "D:\\Project\\Digital Library\\Backend\\Backend\\Mapper\\MappingProfile.cs",
+              "RelativeToolTip": "Backend\\Mapper\\MappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T02:17:21.225Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-24T09:41:50.805Z",
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ITransactionService.cs",
-              "DocumentMoniker": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Services\\Interfaces\\ITransactionService.cs",
-              "RelativeDocumentMoniker": "Backend\\Services\\Interfaces\\ITransactionService.cs",
-              "ToolTip": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Services\\Interfaces\\ITransactionService.cs",
-              "RelativeToolTip": "Backend\\Services\\Interfaces\\ITransactionService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAuAAAAAAAAAA==",
+              "Title": "ReturnedTransactionDto.cs",
+              "DocumentMoniker": "D:\\Project\\Digital Library\\Backend\\Backend\\DTOs\\ReturnedTransactionDto.cs",
+              "RelativeDocumentMoniker": "Backend\\DTOs\\ReturnedTransactionDto.cs",
+              "ToolTip": "D:\\Project\\Digital Library\\Backend\\Backend\\DTOs\\ReturnedTransactionDto.cs",
+              "RelativeToolTip": "Backend\\DTOs\\ReturnedTransactionDto.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAA0wAkAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T07:29:42.687Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-28T04:05:34.302Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TransactionService.cs",
-              "DocumentMoniker": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Services\\TransactionService.cs",
-              "RelativeDocumentMoniker": "Backend\\Services\\TransactionService.cs",
-              "ToolTip": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Services\\TransactionService.cs",
-              "RelativeToolTip": "Backend\\Services\\TransactionService.cs",
-              "ViewState": "AgIAAIcAAAAAAAAAAAArwJgAAABSAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T07:27:47.429Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "Backend\\Services\\UserService.cs",
-              "ToolTip": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Services\\UserService.cs",
-              "RelativeToolTip": "Backend\\Services\\UserService.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAowDYAAAAsAAAAAAAAAA==",
+              "Title": "TransactionService.cs",
+              "DocumentMoniker": "D:\\Project\\Digital Library\\Backend\\Backend\\Services\\TransactionService.cs",
+              "RelativeDocumentMoniker": "Backend\\Services\\TransactionService.cs",
+              "ToolTip": "D:\\Project\\Digital Library\\Backend\\Backend\\Services\\TransactionService.cs",
+              "RelativeToolTip": "Backend\\Services\\TransactionService.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAgwGQAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T07:38:53.6Z",
+              "WhenOpened": "2025-01-27T16:00:36.721Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "UpdateStatusTransactionDto.cs",
-              "DocumentMoniker": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\DTOs\\UpdateStatusTransactionDto.cs",
-              "RelativeDocumentMoniker": "Backend\\DTOs\\UpdateStatusTransactionDto.cs",
-              "ToolTip": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\DTOs\\UpdateStatusTransactionDto.cs",
-              "RelativeToolTip": "Backend\\DTOs\\UpdateStatusTransactionDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAmAAAAAAAAAA==",
+              "Title": "Transaction.cs",
+              "DocumentMoniker": "D:\\Project\\Digital Library\\Backend\\Backend\\Models\\Transaction.cs",
+              "RelativeDocumentMoniker": "Backend\\Models\\Transaction.cs",
+              "ToolTip": "D:\\Project\\Digital Library\\Backend\\Backend\\Models\\Transaction.cs",
+              "RelativeToolTip": "Backend\\Models\\Transaction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T06:55:37.917Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-27T12:45:25.443Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "BookService.cs",
-              "DocumentMoniker": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Services\\BookService.cs",
-              "RelativeDocumentMoniker": "Backend\\Services\\BookService.cs",
-              "ToolTip": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Services\\BookService.cs",
-              "RelativeToolTip": "Backend\\Services\\BookService.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAA9wDcAAAAZAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "MemberCheckDto.cs",
+              "DocumentMoniker": "D:\\Project\\Digital Library\\Backend\\Backend\\DTOs\\MemberCheckDto.cs",
+              "RelativeDocumentMoniker": "Backend\\DTOs\\MemberCheckDto.cs",
+              "ToolTip": "D:\\Project\\Digital Library\\Backend\\Backend\\DTOs\\MemberCheckDto.cs",
+              "RelativeToolTip": "Backend\\DTOs\\MemberCheckDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T02:05:27.528Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-24T09:40:19.826Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ITransactionService.cs",
+              "DocumentMoniker": "D:\\Project\\Digital Library\\Backend\\Backend\\Services\\Interfaces\\ITransactionService.cs",
+              "RelativeDocumentMoniker": "Backend\\Services\\Interfaces\\ITransactionService.cs",
+              "ToolTip": "D:\\Project\\Digital Library\\Backend\\Backend\\Services\\Interfaces\\ITransactionService.cs",
+              "RelativeToolTip": "Backend\\Services\\Interfaces\\ITransactionService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA0AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T16:00:10.365Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AddTransactionDto.cs",
+              "DocumentMoniker": "D:\\Project\\Digital Library\\Backend\\Backend\\DTOs\\AddTransactionDto.cs",
+              "RelativeDocumentMoniker": "Backend\\DTOs\\AddTransactionDto.cs",
+              "ToolTip": "D:\\Project\\Digital Library\\Backend\\Backend\\DTOs\\AddTransactionDto.cs",
+              "RelativeToolTip": "Backend\\DTOs\\AddTransactionDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T15:53:58.833Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "TransactionController.cs",
-              "DocumentMoniker": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Controllers\\TransactionController.cs",
+              "DocumentMoniker": "D:\\Project\\Digital Library\\Backend\\Backend\\Controllers\\TransactionController.cs",
               "RelativeDocumentMoniker": "Backend\\Controllers\\TransactionController.cs",
-              "ToolTip": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Controllers\\TransactionController.cs",
+              "ToolTip": "D:\\Project\\Digital Library\\Backend\\Backend\\Controllers\\TransactionController.cs",
               "RelativeToolTip": "Backend\\Controllers\\TransactionController.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAwwC8AAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAqwDYAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T01:36:01.605Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-27T16:08:35.629Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BorrowedTransactionDto.cs",
-              "DocumentMoniker": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\DTOs\\BorrowedTransactionDto.cs",
-              "RelativeDocumentMoniker": "Backend\\DTOs\\BorrowedTransactionDto.cs",
-              "ToolTip": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\DTOs\\BorrowedTransactionDto.cs",
-              "RelativeToolTip": "Backend\\DTOs\\BorrowedTransactionDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAmAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\Project\\Digital Library\\Backend\\Backend\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Backend\\Services\\UserService.cs",
+              "ToolTip": "D:\\Project\\Digital Library\\Backend\\Backend\\Services\\UserService.cs",
+              "RelativeToolTip": "Backend\\Services\\UserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T08:15:59.624Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-27T12:55:32.407Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "TransactionDto.cs",
-              "DocumentMoniker": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\DTOs\\TransactionDto.cs",
-              "RelativeDocumentMoniker": "Backend\\DTOs\\TransactionDto.cs",
-              "ToolTip": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\DTOs\\TransactionDto.cs",
-              "RelativeToolTip": "Backend\\DTOs\\TransactionDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\Project\\Digital Library\\Backend\\Backend\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Backend\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\Project\\Digital Library\\Backend\\Backend\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Backend\\Controllers\\UserController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAkwCgAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T07:25:53.809Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-27T12:55:11.726Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Member.cs",
+              "DocumentMoniker": "D:\\Project\\Digital Library\\Backend\\Backend\\Models\\Member.cs",
+              "RelativeDocumentMoniker": "Backend\\Models\\Member.cs",
+              "ToolTip": "D:\\Project\\Digital Library\\Backend\\Backend\\Models\\Member.cs",
+              "RelativeToolTip": "Backend\\Models\\Member.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T12:45:01.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DetailTransaction.cs",
+              "DocumentMoniker": "D:\\Project\\Digital Library\\Backend\\Backend\\Models\\DetailTransaction.cs",
+              "RelativeDocumentMoniker": "Backend\\Models\\DetailTransaction.cs",
+              "ToolTip": "D:\\Project\\Digital Library\\Backend\\Backend\\Models\\DetailTransaction.cs",
+              "RelativeToolTip": "Backend\\Models\\DetailTransaction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T12:43:43.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Book.cs",
+              "DocumentMoniker": "D:\\Project\\Digital Library\\Backend\\Backend\\Models\\Book.cs",
+              "RelativeDocumentMoniker": "Backend\\Models\\Book.cs",
+              "ToolTip": "D:\\Project\\Digital Library\\Backend\\Backend\\Models\\Book.cs",
+              "RelativeToolTip": "Backend\\Models\\Book.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T12:42:21.604Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Project\\Digital Library\\Backend\\Backend\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Backend\\Models\\User.cs",
+              "ToolTip": "D:\\Project\\Digital Library\\Backend\\Backend\\Models\\User.cs",
+              "RelativeToolTip": "Backend\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T12:40:25.723Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Project\\Digital Library\\Backend\\Backend\\appsettings.json",
+              "RelativeDocumentMoniker": "Backend\\appsettings.json",
+              "ToolTip": "D:\\Project\\Digital Library\\Backend\\Backend\\appsettings.json",
+              "RelativeToolTip": "Backend\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-27T12:37:14.475Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MemberService.cs",
+              "DocumentMoniker": "D:\\Project\\Digital Library\\Backend\\Backend\\Services\\MemberService.cs",
+              "RelativeDocumentMoniker": "Backend\\Services\\MemberService.cs",
+              "ToolTip": "D:\\Project\\Digital Library\\Backend\\Backend\\Services\\MemberService.cs",
+              "RelativeToolTip": "Backend\\Services\\MemberService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBwAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T09:41:22.525Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IMemberService.cs",
+              "DocumentMoniker": "D:\\Project\\Digital Library\\Backend\\Backend\\Services\\Interfaces\\IMemberService.cs",
+              "RelativeDocumentMoniker": "Backend\\Services\\Interfaces\\IMemberService.cs",
+              "ToolTip": "D:\\Project\\Digital Library\\Backend\\Backend\\Services\\Interfaces\\IMemberService.cs",
+              "RelativeToolTip": "Backend\\Services\\Interfaces\\IMemberService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T09:35:13.07Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MemberController.cs",
+              "DocumentMoniker": "D:\\Project\\Digital Library\\Backend\\Backend\\Controllers\\MemberController.cs",
+              "RelativeDocumentMoniker": "Backend\\Controllers\\MemberController.cs",
+              "ToolTip": "D:\\Project\\Digital Library\\Backend\\Backend\\Controllers\\MemberController.cs",
+              "RelativeToolTip": "Backend\\Controllers\\MemberController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAmwCUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T09:32:22.727Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }

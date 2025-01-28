@@ -2,51 +2,76 @@
   <c-col xl="8" [offset]="{ xl: 2 }">
     <section class="bg-white rounded-3 p-4">
       <h3 class="text-center mb-4">New Borrowing Books</h3>
-      <!-- <form cForm> -->
       <c-input-group class="mb-3">
-        <input
-          aria-describedby="input-member-id"
-          aria-label="Input Member ID"
-          class="bg-light"
-          cFormControl
-          [(ngModel)]="memberId"
-          placeholder="Input Member ID"
-        />
-        <button
-          cButton
-          color="info"
-          id="input-member-id"
-          type="button"
-          class="text-white"
-          (click)="onCheckMember()"
-        >
+        <input aria-describedby="input-member-id" [disabled]="isValid" aria-label="Input Member ID" class="bg-light"
+          cFormControl [(ngModel)]="memberId" placeholder="Input Member ID" (keyup.enter)="onCheckMember()" />
+        <button cButton color="info" id="input-member-id" type="button" class="text-white" (click)="onCheckMember()"
+          [disabled]="isValid">
           Check
         </button>
       </c-input-group>
 
       <h6 class="ms-1">Member Data :</h6>
-      <input
-        aria-label="Member Name"
-        cFormControl
-        disabled
-        [(ngModel)]="memberName"
-        [value]="memberName"
-        placeholder="Member Name"
-        type="text"
-        class="mb-3"
-      />
+      <input aria-label="Member Name" cFormControl disabled [(ngModel)]="memberName" [value]="memberName"
+        placeholder="Member Name" type="text" class="mb-3" />
 
-      <input
-        aria-label="Member Phone"
-        cFormControl
-        disabled
-        [(ngModel)]="memberPhone"
-        [value]="memberPhone"
-        placeholder="Member Phone"
-        type="text"
-        class="mb-3"
-      />
-      <!-- </form> -->
+      <input aria-label="Member Phone" cFormControl disabled [(ngModel)]="memberPhone" [value]="memberPhone"
+        placeholder="Member Phone" type="text" class="mb-3" />
+
+      @if (isValid) {
+      <h6 class="ms-1">Selected Books :</h6>
+      <ol>
+        @for (selected of selectedBook; track $index) {
+        <li> {{ selected }} - {{ selectedBookTitle[$index] }} </li>
+        }
+      </ol>
+
+      <c-input-group class="mb-3">
+        <span cInputGroupText id="basic-addon1">
+          <i class="bi bi-search"></i>
+        </span>
+        <input aria-describedby="basic-addon1" aria-label="Search here" cFormControl placeholder="Search here"
+          [(ngModel)]="searchKeyword" (keyup)="onSearch()" />
+      </c-input-group>
+
+      <table cTable>
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Book Code</th>
+            <th scope="col">Title</th>
+            <th scope="col">Stock</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (book of allBooks; track $index) {
+          <tr>
+            <th scope="row">
+              <input cFormCheckInput [checked]="selectedBook.indexOf(book.code) !== -1" type="checkbox"
+                [value]="book.code" (change)="onChangeSelectBook($event, book.title)">
+            </th>
+            <td> {{ book.code }} </td>
+            <td> {{ book.title }} </td>
+            <td> {{ book.stock }} </td>
+          </tr>
+          }
+        </tbody>
+      </table>
+
+      <!-- <c-pagination align="end" aria-label="Page navigation example">
+        <c-page-item [disabled]="true">
+          <button cPageLink type="button">Previous</button>
+        </c-page-item>
+        <c-page-item>
+          <button cPageLink type="button">Next</button>
+        </c-page-item>
+      </c-pagination> -->
+
+      <button cButton (click)="onSubmit()" type="button">Submit</button>
+
+      }
+
     </section>
+
   </c-col>
 </c-row>

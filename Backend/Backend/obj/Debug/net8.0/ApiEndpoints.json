@@ -219,6 +219,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Backend.Controllers.MemberController",
+    "Method": "GetMemberCheck",
+    "RelativePath": "api/members/check/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Backend.DTOs.MemberCheckDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Backend.Controllers.TransactionController",
     "Method": "GetAllTransactions",
     "RelativePath": "api/transactions",
@@ -237,6 +263,22 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "Backend.Controllers.TransactionController",
+    "Method": "AddTransaction",
+    "RelativePath": "api/transactions",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addTransactionDto",
+        "Type": "Backend.DTOs.AddTransactionDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Backend.Controllers.TransactionController",
@@ -332,6 +374,42 @@
     "ReturnTypes": [
       {
         "Type": "Backend.Models.Transaction",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Backend.Controllers.TransactionController",
+    "Method": "GetReturnedTransactions",
+    "RelativePath": "api/transactions/returned",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "skip",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "limit",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "search",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Backend.DTOs.ReturnedTransactionDto, Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

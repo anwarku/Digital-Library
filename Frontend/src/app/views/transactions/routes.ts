@@ -1,3 +1,4 @@
+import { HistoryTransactionsComponent } from './history-transactions/history-transactions.component';
 import { Routes } from '@angular/router';
 import { CreateTransactionComponent } from './create-transaction/create-transaction.component';
 import { BorrowedTransactionsComponent } from './borrowed-transactions/borrowed-transactions.component';
@@ -20,6 +21,13 @@ export const routes: Routes = [
         component: BorrowedTransactionsComponent,
         data: {
           title: 'Borrowed Transactions',
+        },
+      },
+      {
+        path: 'history',
+        component: HistoryTransactionsComponent,
+        data: {
+          title: 'History Transactions',
         },
       },
       {

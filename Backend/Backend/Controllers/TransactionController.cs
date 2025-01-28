@@ -42,6 +42,21 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
+        [Route("returned")]
+        public ActionResult<List<ReturnedTransactionDto>> GetReturnedTransactions([FromQuery] int skip = 0, int limit = 5, string search = "")
+        {
+            var returnedTransactions = _transactionService.GetReturnedTransactions(skip, limit, search);
+
+            return Ok(new
+            {
+                limit,
+                skip,
+                total = (search.IsNullOrEmpty() ? _transactionService.CountReturnedTransactions() : _transactionService.CountReturnedSearchTransactions(search)),
+                data = returnedTransactions
+            });
+        }
+
+        [HttpGet]
         [Route("{transactionId}")]
         public ActionResult<TransactionDto> GetTransaction(string transactionId)
         {
@@ -62,6 +77,13 @@ namespace Backend.Controllers
         public ActionResult<Transaction> GetLastTrancastion()
         {
             return Ok(_transactionService.GetLastTransaction());
+        }
+
+        [HttpPost]
+        public ActionResult AddTransaction([FromBody] AddTransactionDto addTransactionDto)
+        {
+            _transactionService.Add(addTransactionDto);
+            return Created();
         }
 
         [HttpPatch]

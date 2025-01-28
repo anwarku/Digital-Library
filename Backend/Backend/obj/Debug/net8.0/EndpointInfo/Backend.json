@@ -394,6 +394,46 @@
         }
       }
     },
+    "/api/members/check/{id}": {
+      "get": {
+        "tags": [
+          "Member"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MemberCheckDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MemberCheckDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MemberCheckDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/transactions": {
       "get": {
         "tags": [
@@ -428,6 +468,40 @@
                 }
               }
             }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Transaction"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddTransactionDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddTransactionDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddTransactionDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddTransactionDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
@@ -490,6 +564,72 @@
                   "type": "array",
                   "items": {
                     "$ref": "#/components/schemas/BorrowedTransactionDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/transactions/returned": {
+      "get": {
+        "tags": [
+          "Transaction"
+        ],
+        "parameters": [
+          {
+            "name": "skip",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 5
+            }
+          },
+          {
+            "name": "search",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ReturnedTransactionDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ReturnedTransactionDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ReturnedTransactionDto"
                   }
                 }
               }
@@ -752,6 +892,23 @@
         },
         "additionalProperties": false
       },
+      "AddTransactionDto": {
+        "type": "object",
+        "properties": {
+          "memberId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "books": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "Book": {
         "type": "object",
         "properties": {
@@ -863,6 +1020,50 @@
             "nullable": true
           },
           "job": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MemberCheckDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ReturnedTransactionDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "memberName": {
+            "type": "string",
+            "nullable": true
+          },
+          "borrowDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "returnDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "status": {
             "type": "string",
             "nullable": true
           }
