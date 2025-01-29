@@ -1,12 +1,20 @@
 {
   "Version": 1,
-  "Hash": "+8gz7rjoDcLSTM7Kwf5qkbapKXDd97xhyAb9pxhYrew=",
+  "Hash": "pwS0BI8pzOg0KgrQODddhFGn4Xc9zVVNAW9yRcgckz0=",
   "Source": "Backend",
   "BasePath": "_content/Backend",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Backend\\wwwroot",
+      "Source": "Backend",
+      "ContentRoot": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\",
+      "BasePath": "_content/Backend",
+      "Pattern": "**"
+    }
+  ],
   "Assets": [],
   "Endpoints": []
 }

@@ -8,7 +8,7 @@ namespace Backend.Services.Interfaces
         List<Member> GetAllMembers();
         Member GetMemberById(int id);
         MemberCheckDto GetMemberCheckById(int id);
-        void Add(AddMemberDto addMemberDto);
+        void Add(AddMemberDto addMemberDto, IFormFile imageFile);
         void Delete(int id);
         bool Exist(int id);
     }

@@ -287,24 +287,49 @@
         ],
         "requestBody": {
           "content": {
-            "application/json-patch+json": {
+            "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/AddMemberDto"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AddMemberDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AddMemberDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/AddMemberDto"
+                "required": [
+                  "Gender",
+                  "Name",
+                  "Phone"
+                ],
+                "type": "object",
+                "properties": {
+                  "Name": {
+                    "type": "string"
+                  },
+                  "Gender": {
+                    "type": "string"
+                  },
+                  "Phone": {
+                    "type": "string"
+                  },
+                  "Job": {
+                    "type": "string"
+                  },
+                  "imageFile": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "Name": {
+                  "style": "form"
+                },
+                "Gender": {
+                  "style": "form"
+                },
+                "Phone": {
+                  "style": "form"
+                },
+                "Job": {
+                  "style": "form"
+                },
+                "imageFile": {
+                  "style": "form"
+                }
               }
             }
           }
@@ -865,33 +890,6 @@
         },
         "additionalProperties": false
       },
-      "AddMemberDto": {
-        "required": [
-          "gender",
-          "name",
-          "phone"
-        ],
-        "type": "object",
-        "properties": {
-          "name": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "gender": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "phone": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "job": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "AddTransactionDto": {
         "type": "object",
         "properties": {
@@ -1022,6 +1020,14 @@
           "job": {
             "type": "string",
             "nullable": true
+          },
+          "image": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
           }
         },
         "additionalProperties": false

@@ -17,4 +17,16 @@ export class MemberService {
   checkMemberById(memberId: number) {
     return this.http.get<any>(this.baseUrl + `members/check/${memberId}`);
   }
+
+  storeMember(data: any, imageFile: File) {
+    const formData = new FormData();
+
+    formData.append('name', data.name);
+    formData.append('gender', data.gender);
+    formData.append('phone', data.phone);
+    formData.append('job', data.job);
+    formData.append('imageFile', imageFile);
+
+    return this.http.post<any>(this.baseUrl + 'members', formData);
+  }
 }

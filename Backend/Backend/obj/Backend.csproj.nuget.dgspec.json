@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Project\\Digital Library\\Backend\\Backend\\Backend.csproj": {}
+    "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Backend.csproj": {}
   },
   "projects": {
-    "D:\\Project\\Digital Library\\Backend\\Backend\\Backend.csproj": {
+    "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project\\Digital Library\\Backend\\Backend\\Backend.csproj",
+        "projectUniqueName": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Backend.csproj",
         "projectName": "Backend",
-        "projectPath": "D:\\Project\\Digital Library\\Backend\\Backend\\Backend.csproj",
-        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "D:\\Project\\Digital Library\\Backend\\Backend\\obj\\",
+        "projectPath": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Backend.csproj",
+        "packagesPath": "C:\\Users\\khaeril.anwar\\.nuget\\packages\\",
+        "outputPath": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\khaeril.anwar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -80,7 +80,7 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.6.2, )"
+              "version": "[7.2.0, )"
             }
           },
           "imports": [

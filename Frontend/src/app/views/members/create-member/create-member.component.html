@@ -1,1 +1,106 @@
-<p>create-member works!</p>
+<c-row>
+  <c-col xl="8" [offset]="{ xl: 2 }">
+    <section class="bg-white rounded-3 p-4">
+      <h3 class="text-center mb-4">Add New Member</h3>
+      <form cForm [formGroup]="newMember" (ngSubmit)="onSubmitNewMember()">
+        <div class="mb-3">
+          <label cLabel class="mb-2" for="name">
+            Member Name
+            <app-required></app-required>
+          </label>
+          <input
+            cFormControl
+            id="name"
+            class="bg-light"
+            placeholder="Name of Member"
+            type="text"
+            formControlName="name"
+            [valid]="name?.invalid ? false : undefined"
+          />
+          <c-form-feedback [valid]="name?.invalid ? false : undefined">
+            Member name is required
+          </c-form-feedback>
+        </div>
+        <div class="mb-3 d-flex justify-content-evenly">
+          <c-form-check inline>
+            <input
+              cFormCheckInput
+              id="male"
+              checked
+              formControlName="gender"
+              type="radio"
+              value="Male"
+            />
+            <label cFormCheckLabel for="male">Male</label>
+          </c-form-check>
+          <c-form-check inline>
+            <input
+              cFormCheckInput
+              id="female"
+              formControlName="gender"
+              type="radio"
+              value="Female"
+            />
+            <label cFormCheckLabel for="female">Female</label>
+          </c-form-check>
+        </div>
+
+        <div class="mb-3">
+          <label cLabel class="mb-2" for="phone">
+            Member Phone
+            <app-required></app-required>
+          </label>
+          <input
+            cFormControl
+            id="phone"
+            class="bg-light"
+            placeholder="Number Phone of Member"
+            type="text"
+            formControlName="phone"
+            [valid]="phone?.invalid ? false : undefined"
+          />
+          <c-form-feedback [valid]="phone?.invalid ? false : undefined">
+            Member phone is required
+          </c-form-feedback>
+        </div>
+
+        <div class="mb-3">
+          <label cLabel class="mb-2" for="job">
+            Member Job
+            <app-required></app-required>
+          </label>
+
+          <select
+            aria-label="Member Job Select"
+            formControlName="job"
+            cSelect
+            class="bg-light"
+            [valid]="job?.invalid ? false : undefined"
+          >
+            @for (job of listOfJobs; track $index) {
+            <option [value]="job">{{ job }}</option>
+            }
+          </select>
+
+          <c-form-feedback [valid]="job?.invalid ? false : undefined">
+            Job is required
+          </c-form-feedback>
+        </div>
+
+        <div class="mb-3">
+          <label cLabel for="formFile"
+            >Member Photo <app-required></app-required
+          ></label>
+          <input
+            cFormControl
+            id="formFile"
+            (change)="onChangeImage($event)"
+            type="file"
+          />
+        </div>
+
+        <button cButton type="submit">Submit Member</button>
+      </form>
+    </section>
+  </c-col>
+</c-row>

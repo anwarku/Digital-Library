@@ -1,55 +1,79 @@
 <c-row>
-    <c-col xl="8" [offset]="{ xl: 2 }">
-        <section class="bg-white rounded-3 p-4">
-            <h3 class="text-center mb-4">Member Data</h3>
-            <c-input-group class="mb-3">
-                <input aria-describedby="input-member-id" aria-label="Input Member ID" class="bg-light" cFormControl
-                    [(ngModel)]="memberId" placeholder="Input Member ID" (keyup.enter)="onSearchMember()" />
-                <button cButton color="info" id="input-member-id" type="button" class="text-white"
-                    (click)="onSearchMember()">
-                    Search
-                </button>
-            </c-input-group>
+  <c-col xl="8" [offset]="{ xl: 2 }">
+    <section class="bg-white rounded-3 p-4">
+      <h3 class="text-center mb-4">Member Data</h3>
+      <c-input-group class="mb-3">
+        <input
+          aria-describedby="input-member-id"
+          aria-label="Input Member ID"
+          class="bg-light"
+          cFormControl
+          [(ngModel)]="memberId"
+          placeholder="Input Member ID"
+          (keyup.enter)="onSearchMember()"
+        />
+        <button
+          cButton
+          color="info"
+          id="input-member-id"
+          type="button"
+          class="text-white"
+          (click)="onSearchMember()"
+        >
+          Search
+        </button>
+      </c-input-group>
 
-            <div class="card mb-3" style="max-width: 540px;">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="https://picsum.photos/400" class="img-fluid rounded-start" alt="Foto Member">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title"> {{ memberData.id }} </h5>
+      @if (isMemberFound) {
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-4 overflow-hidden">
+            <img
+              src="https://picsum.photos/400"
+              class="rounded-start img-fluid"
+              alt="Foto Member"
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{ memberData.id }}</h5>
 
-                            <table [bordered]="true" cTable>
-                                <tr>
-                                    <td class="py-2"># Member Name</td>
-                                    <td class="px-2">:</td>
-                                    <td> {{ memberData.name }} </td>
-                                </tr>
-                                <tr>
-                                    <td class="py-2"># Gender</td>
-                                    <td class="px-2">:</td>
-                                    <td> {{ memberData.gender }} </td>
-                                </tr>
-                                <tr>
-                                    <td class="py-2"># Phone</td>
-                                    <td class="px-2">:</td>
-                                    <td> {{ memberData.phone }} </td>
-                                </tr>
-                                <tr>
-                                    <td class="py-2"># Job</td>
-                                    <td class="px-2">:</td>
-                                    <td> {{ memberData.job }} </td>
-                                </tr>
-                            </table>
+              <table [bordered]="true" cTable>
+                <tr>
+                  <td class="py-2"># Member Name</td>
+                  <td class="px-2">:</td>
+                  <td>{{ memberData.name }}</td>
+                </tr>
+                <tr>
+                  <td class="py-2"># Gender</td>
+                  <td class="px-2">:</td>
+                  <td>{{ memberData.gender }}</td>
+                </tr>
+                <tr>
+                  <td class="py-2"># Phone</td>
+                  <td class="px-2">:</td>
+                  <td>{{ memberData.phone }}</td>
+                </tr>
+                <tr>
+                  <td class="py-2"># Job</td>
+                  <td class="px-2">:</td>
+                  <td>{{ memberData.job }}</td>
+                </tr>
+              </table>
 
-                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
+              <p class="card-text">
+                <small class="text-body-secondary"
+                  >Created :
+                  {{
+                    memberData.createdAt | date : "EEEE, dd MMMM y, HH:mm:ss"
+                  }}
+                </small>
+              </p>
             </div>
-
-        </section>
-
-    </c-col>
+          </div>
+        </div>
+      </div>
+      }
+    </section>
+  </c-col>
 </c-row>

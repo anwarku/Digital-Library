@@ -32,7 +32,10 @@ namespace Backend.Controllers
             var member = _memberService.GetMemberById(id);
             if (member == null)
             {
-                return NotFound();
+                return NotFound(new
+                {
+                    Message = "Member is not found!"
+                });
             }
             return Ok(member);
         }
@@ -54,15 +57,22 @@ namespace Backend.Controllers
         }
 
         [HttpPost]
-        public ActionResult<Member> StoreMember([FromBody] AddMemberDto addMemberDto)
+        public ActionResult<Member> StoreMember([FromForm] AddMemberDto addMemberDto, IFormFile imageFile)
         {
-            if (!ModelState.IsValid)
+            try
             {
-                return BadRequest(ModelState);
-            }
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
 
-            _memberService.Add(addMemberDto);
-            return Created();
+                _memberService.Add(addMemberDto, imageFile);
+                return Created();
+            }
+            catch (Exception ex) 
+            {
+                return BadRequest(new {Message = ex.Message});
+            }
         }
 
         [HttpDelete]

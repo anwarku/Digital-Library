@@ -95,25 +95,46 @@ cursor = conn.cursor()
 
 # Generate tabel TransactionDetails
 # Mendapatkan data transactions
-query_transaction = "SELECT Id FROM Transactions"
-cursor.execute(query_transaction)
-transactions = cursor.fetchall()
-transaction_ids = [transactions[i][0] for i in range(len(transactions))]
+# query_transaction = "SELECT Id FROM Transactions"
+# cursor.execute(query_transaction)
+# transactions = cursor.fetchall()
+# transaction_ids = [transactions[i][0] for i in range(len(transactions))]
 
-# # Mendapatkan data books
-query_books = "SELECT Code FROM Books"
-cursor.execute(query_books)
-books = cursor.fetchall()
-book_codes = tuple([books[i][0] for i in range(len(books))])
+# # # Mendapatkan data books
+# query_books = "SELECT Code FROM Books"
+# cursor.execute(query_books)
+# books = cursor.fetchall()
+# book_codes = tuple([books[i][0] for i in range(len(books))])
 
-for trans in transaction_ids:
-    # Mendapatkan jumlah buku yang dipinjam
-    count = fake.random_int(1, 3)
-    for i in range(count):
-        # Query untuk menambahkan data detail transaksi
-        sql_query = f"INSERT INTO DetailTransactions (TransactionId, BookCode) VALUES (?, ?)"
-        data = (trans, fake.random_element(elements=book_codes))
-        cursor.execute(sql_query, data)
-        conn.commit()
+# for trans in transaction_ids:
+#     # Mendapatkan jumlah buku yang dipinjam
+#     count = fake.random_int(1, 3)
+#     for i in range(count):
+#         # Query untuk menambahkan data detail transaksi
+#         sql_query = f"INSERT INTO DetailTransactions (TransactionId, BookCode) VALUES (?, ?)"
+#         data = (trans, fake.random_element(elements=book_codes))
+#         cursor.execute(sql_query, data)
+#         conn.commit()
+
+# for i in range(1, 11):
+#     query_sql = "UPDATE Members SET CreatedAt = ? WHERE Id = ?"
+#     data = (fake.date_time_between_dates(datetime_start='-150d', datetime_end='-20d'), i)
+#     cursor.execute(query_sql, data)
+#     conn.commit()
+
+# print(fake.date_time_between_dates(datetime_start='-150d', datetime_end='-20d'))
+
+# for _ in range(18):
+#     query_sql = "INSERT INTO Jobs (NameJob) VALUES (?)"
+#     data = (fake.job())
+#     cursor.execute(query_sql, data)
+#     cursor.commit()
+
+jobs = []
+for _ in range(20):
+    jobs.append(fake.job())
+
+print(jobs)
 
 conn.close()
+

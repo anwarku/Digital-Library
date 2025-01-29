@@ -8,10 +8,12 @@ namespace Backend.Services
     public class MemberService : IMemberService
     {
         private readonly ApplicationDbContext _context;
+        private readonly IWebHostEnvironment _environment;
 
-        public MemberService(ApplicationDbContext context)
+        public MemberService(ApplicationDbContext context, IWebHostEnvironment environment)
         {
             _context = context;
+            _environment = environment;
         }
 
         public List<Member> GetAllMembers()
@@ -52,18 +54,31 @@ namespace Backend.Services
             return validMember;
         }
 
-        public void Add(AddMemberDto addMemberDto)
+        public void Add(AddMemberDto addMemberDto, IFormFile imageFile)
         {
-            var member = new Member
+            try
             {
-                Name = addMemberDto.Name,
-                Gender = addMemberDto.Gender,
-                Phone = addMemberDto.Phone,
-                Job = addMemberDto.Job
-            };
+                var member = new Member
+                {
+                    Name = addMemberDto.Name,
+                    Gender = addMemberDto.Gender,
+                    Phone = addMemberDto.Phone,
+                    Job = addMemberDto.Job
+                };
 
-            _context.Members.Add(member);
-            _context.SaveChanges();
+                if (imageFile != null)
+                {
+                    string fileNameImage = SaveImageLocal(imageFile);
+                    member.Image = fileNameImage;
+                }
+
+                _context.Members.Add(member);
+                _context.SaveChanges();
+            }
+            catch (Exception ex) 
+            {
+                throw new Exception($"Failed to save : {ex.Message}");
+            }
         }
 
         public void Delete(int id)
@@ -79,6 +94,46 @@ namespace Backend.Services
         public bool Exist(int id)
         {
             return _context.Members.Any(m => m.Id == id);
+        }
+
+        private string SaveImageLocal(IFormFile imageFile)
+        {
+            try
+            {
+                var extFile = Path.GetExtension(imageFile.FileName);
+                var fileName = Guid.NewGuid() + extFile;
+                var wwwRootPath = Path.Combine(_environment.WebRootPath, "images");
+                var imagePath = Path.Combine(wwwRootPath, fileName);
+
+                // Validasi file ekstensi
+                var allowedExtensions = new string[] { ".jpg", ".jpeg", ".png" };
+                if (!allowedExtensions.Contains(extFile))
+                {
+                    throw new Exception("File is not supported!");
+                }
+
+                // Validasi file ukuran
+                if (imageFile.Length > MegaToByte(2))
+                {
+                    throw new Exception("Size image so large!");
+                }
+
+                using (var stream = new FileStream(imagePath, FileMode.Create))
+                {
+                    imageFile.CopyTo(stream);
+                }
+
+                return fileName;
+            }
+            catch (Exception ex) 
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        private long MegaToByte(double megaSize)
+        {
+            return (long)(megaSize * 1048576);
         }
     }
 }
