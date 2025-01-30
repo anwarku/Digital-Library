@@ -1,10 +1,12 @@
-﻿using Backend.DTOs;
+﻿using Backend.Data;
+using Backend.DTOs;
 using Backend.Models;
 using Backend.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using OfficeOpenXml;
 
 namespace Backend.Controllers
 {
@@ -13,10 +15,12 @@ namespace Backend.Controllers
     public class BookController : ControllerBase
     {
         private readonly IBookService _bookService;
+        private readonly ApplicationDbContext _context;
 
-        public BookController(IBookService bookService)
+        public BookController(IBookService bookService, ApplicationDbContext context)
         {
             _bookService = bookService;
+            _context = context;
         }
 
         [HttpGet]
@@ -71,10 +75,36 @@ namespace Backend.Controllers
         }
 
         [HttpPost]
-        [Route("test")]
-        public IActionResult PostTest([FromBody] AddBookDto addBookDto)
+        [Route("book-download")]
+        public IActionResult DownloadAllBooks(CancellationToken ct)
         {
-            return Ok(addBookDto);
+            // query data from database
+            var data = _context.Books.ToList();
+
+            var stream = new MemoryStream();
+            using (var package = new ExcelPackage(stream)) 
+            {
+                // Mendefinisikan properties file xlsx
+                package.Workbook.Properties.Author = "Khaeril Anwar";
+                package.Workbook.Properties.Company = "PT. Mencari Cinta Sejati";
+                var worksheet = package.Workbook.Worksheets.Add("Sheet hahaa");
+                worksheet.Cells.LoadFromCollection(data, true);
+                package.Save();
+            }
+            stream.Position = 0;
+            string fileDownloadName = "download-hahaa.xlsx";
+
+            return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", fileDownloadName);
+        }
+
+        [HttpGet]
+        [Route("test")]
+        public IActionResult PostTest()
+        {
+            DateTime today = new DateTime();
+            today = DateTime.Now;
+
+            return Ok(new {Data = "Hello world"});
         }
 
         [HttpPatch]

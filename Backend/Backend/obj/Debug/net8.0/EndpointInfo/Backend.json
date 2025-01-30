@@ -208,35 +208,23 @@
         }
       }
     },
-    "/api/books/test": {
+    "/api/books/book-download": {
       "post": {
         "tags": [
           "Book"
         ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/AddBookDto"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AddBookDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AddBookDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/AddBookDto"
-              }
-            }
+        "responses": {
+          "200": {
+            "description": "OK"
           }
-        },
+        }
+      }
+    },
+    "/api/books/test": {
+      "get": {
+        "tags": [
+          "Book"
+        ],
         "responses": {
           "200": {
             "description": "OK"

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment.development';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -17,6 +18,12 @@ export class BookService {
         skip,
         search,
       },
+    });
+  }
+
+  downloadExcelBooks() {
+    return this.http.post(this.baseUrl + 'books/book-download', null, {
+      responseType: 'blob',
     });
   }
 

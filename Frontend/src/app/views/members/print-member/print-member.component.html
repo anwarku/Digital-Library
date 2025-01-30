@@ -1,0 +1,66 @@
+<p>print-member works!</p>
+
+<a cButton [routerLink]="['/book', 'all-books']" target="_blank">Cetak Kartu</a>
+<br />
+<br />
+<button cButton (click)="generatePdf()">Download pdf</button>
+<br />
+<br />
+<button cButton (click)="downloadExcel()">Download Excel</button>
+<br />
+<br />
+<button cButton (click)="downloadExcelApi()">Download Excel Api</button>
+
+<c-row
+  id="memberCard"
+  class="bg-white px-2 py-4 rounded-3 mt-5"
+  style="max-width: 600px"
+>
+  <h4 class="text-center">KARTU PERPUSTAKAAN</h4>
+  <c-col xs="3">
+    <div class="d-flex justify-content-center flex-column">
+      <figure
+        class="mb-2 figure bg-primary overflow-hidden rounded-2 mx-auto mt-2"
+        style="aspect-ratio: 3 / 4; width: 110px"
+      >
+        <img
+          src="https://picsum.photos/300/400"
+          class="figure-img img-fluid"
+          alt="..."
+        />
+      </figure>
+      <span class="text-center" style="font-size: small; font-weight: 600"
+        >04-01-2025</span
+      >
+    </div>
+  </c-col>
+  <c-col xs="9">
+    <table cTable>
+      <tr>
+        <td class="py-2">ID</td>
+        <td class="px-2">:</td>
+        <td>123456787</td>
+      </tr>
+      <tr>
+        <td class="py-2">Nama</td>
+        <td class="px-2">:</td>
+        <td>Muhammad Khaeril Anwar</td>
+      </tr>
+      <tr>
+        <td class="py-2">Tempat, Tanggal Lahir</td>
+        <td class="px-2">:</td>
+        <td>Brebes, 19 September 2002</td>
+      </tr>
+      <tr>
+        <td class="py-2">Pekerjaan</td>
+        <td class="px-2">:</td>
+        <td>Pelajar/mahasiswa</td>
+      </tr>
+      <tr>
+        <td class="py-2">Berlaku Sampai</td>
+        <td class="px-2">:</td>
+        <td>14-01-2030</td>
+      </tr>
+    </table>
+  </c-col>
+</c-row>

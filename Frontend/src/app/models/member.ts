@@ -4,5 +4,6 @@ export interface Member {
   gender: string;
   phone: string;
   job: string;
+  image: string;
   createdAt: Date;
 }

@@ -9,6 +9,11 @@ export class MemberService {
   baseUrl = environment.baseUrl;
   constructor(private http: HttpClient) {}
 
+  // Method untuk mendapatkan semua data members
+  getAllMembers() {
+    return this.http.get<any>(this.baseUrl + 'members');
+  }
+
   // Endpoint untuk mendapatkan data member berdasarkan ID Member
   getMemberById(memberId: number) {
     return this.http.get<any>(this.baseUrl + `members/${memberId}`);

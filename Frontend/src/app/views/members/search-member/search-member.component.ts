@@ -13,6 +13,8 @@ import { MemberService } from '../../../services/member.service';
 import { GlobalService } from './../../../services/global.service';
 import { DatePipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { environment } from '../../../../environments/environment.development';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-search-member',
@@ -33,15 +35,18 @@ export class SearchMemberComponent {
   memberId: string;
   memberData: Member;
   isMemberFound: boolean = false;
+  resourceUrl: string = environment.resourceUrl;
 
   constructor(
     private memberService: MemberService,
-    private globalService: GlobalService
+    private globalService: GlobalService,
+    private spinner: NgxSpinnerService
   ) {}
 
   // Tabel member tambahkan created at
 
   onSearchMember() {
+    this.spinner.show();
     // Mengecek apakah user menginputkan adalah angka
     const isNumber = Number(this.memberId);
 
@@ -51,9 +56,11 @@ export class SearchMemberComponent {
         (res: any) => {
           this.memberData = res;
           this.isMemberFound = true;
+          this.spinner.hide();
         },
         // Jika mengembalikan HTTP Response Error
         (err: any) => {
+          this.spinner.hide();
           // Memberikn feedback error
           this.globalService.sweetAlert.fire({
             icon: 'error',
@@ -62,6 +69,7 @@ export class SearchMemberComponent {
         }
       );
     } else {
+      this.spinner.hide();
       this.memberId = '';
       this.globalService.sweetAlert.fire({
         icon: 'error',

@@ -116,18 +116,22 @@
   },
   {
     "ContainingType": "Backend.Controllers.BookController",
-    "Method": "PostTest",
-    "RelativePath": "api/books/test",
+    "Method": "DownloadAllBooks",
+    "RelativePath": "api/books/book-download",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "addBookDto",
-        "Type": "Backend.DTOs.AddBookDto",
-        "IsRequired": true
-      }
-    ],
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend.Controllers.BookController",
+    "Method": "PostTest",
+    "RelativePath": "api/books/test",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

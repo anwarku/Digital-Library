@@ -67,6 +67,11 @@ export const navItems: INavData[] = [
         url: '/members/search',
         icon: 'nav-icon-bullet',
       },
+      {
+        name: 'Print',
+        url: '/members/print',
+        icon: 'nav-icon-bullet',
+      },
     ],
   },
 

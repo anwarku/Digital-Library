@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pwS0BI8pzOg0KgrQODddhFGn4Xc9zVVNAW9yRcgckz0=",
+  "Hash": "C0zsW5pWO/xzKykmhwIupg1u8ssCx9ts5KlZhPd4UI8=",
   "Source": "Backend",
   "BasePath": "_content/Backend",
   "Mode": "Default",
@@ -15,6 +15,111 @@
       "Pattern": "**"
     }
   ],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": [
+    {
+      "Identity": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\images\\9ef97116-ab18-4ed1-8f18-d9f76b7fbf1d.jpg",
+      "SourceId": "Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\",
+      "BasePath": "_content/Backend",
+      "RelativePath": "images/9ef97116-ab18-4ed1-8f18-d9f76b7fbf1d#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rjbcljv6ba",
+      "Integrity": "iWmX0iJYgbLWQxEmCutT5q44n2Mq3LGvNCWB0lOepX8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\9ef97116-ab18-4ed1-8f18-d9f76b7fbf1d.jpg"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "images/9ef97116-ab18-4ed1-8f18-d9f76b7fbf1d.jpg",
+      "AssetFile": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\images\\9ef97116-ab18-4ed1-8f18-d9f76b7fbf1d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "255902"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iWmX0iJYgbLWQxEmCutT5q44n2Mq3LGvNCWB0lOepX8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 29 Jan 2025 09:34:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-iWmX0iJYgbLWQxEmCutT5q44n2Mq3LGvNCWB0lOepX8="
+        }
+      ]
+    },
+    {
+      "Route": "images/9ef97116-ab18-4ed1-8f18-d9f76b7fbf1d.rjbcljv6ba.jpg",
+      "AssetFile": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\images\\9ef97116-ab18-4ed1-8f18-d9f76b7fbf1d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "255902"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iWmX0iJYgbLWQxEmCutT5q44n2Mq3LGvNCWB0lOepX8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 29 Jan 2025 09:34:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rjbcljv6ba"
+        },
+        {
+          "Name": "label",
+          "Value": "images/9ef97116-ab18-4ed1-8f18-d9f76b7fbf1d.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-iWmX0iJYgbLWQxEmCutT5q44n2Mq3LGvNCWB0lOepX8="
+        }
+      ]
+    }
+  ]
 }

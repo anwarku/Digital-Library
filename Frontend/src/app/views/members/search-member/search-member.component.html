@@ -29,7 +29,11 @@
         <div class="row g-0">
           <div class="col-md-4 overflow-hidden">
             <img
-              src="https://picsum.photos/400"
+              [src]="
+                memberData.image !== null
+                  ? resourceUrl + memberData.image
+                  : 'https://picsum.photos/400'
+              "
               class="rounded-start img-fluid"
               alt="Foto Member"
             />
