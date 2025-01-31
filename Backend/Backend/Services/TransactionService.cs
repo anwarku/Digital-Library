@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Backend.Data;
 using Backend.DTOs;
+using Backend.Helper;
 using Backend.Models;
 using Backend.Services.Interfaces;
 using Microsoft.AspNetCore.Http.HttpResults;
@@ -12,11 +13,13 @@ namespace Backend.Services
     {
         private readonly ApplicationDbContext _context;
         private readonly IMapper _mapper;
+        private readonly IWebHostEnvironment _environment;
 
-        public TransactionService(ApplicationDbContext context, IMapper mapper)
+        public TransactionService(ApplicationDbContext context, IMapper mapper, IWebHostEnvironment environment)
         {
             _context = context;
             _mapper = mapper;
+            _environment = environment;
         }
 
         public List<TransactionDto> GetAllTransactions()

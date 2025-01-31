@@ -232,6 +232,56 @@
         }
       }
     },
+    "/api/reports": {
+      "post": {
+        "tags": [
+          "FileReport"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "ReportDate",
+                  "UserId"
+                ],
+                "type": "object",
+                "properties": {
+                  "UserId": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "ReportDate": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "pdf": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "UserId": {
+                  "style": "form"
+                },
+                "ReportDate": {
+                  "style": "form"
+                },
+                "pdf": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/members": {
       "get": {
         "tags": [
@@ -647,6 +697,18 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/api/transactions/test-data": {
+      "get": {
+        "tags": [
+          "Transaction"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }

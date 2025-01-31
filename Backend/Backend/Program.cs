@@ -22,6 +22,7 @@ builder.Services.AddScoped<IBookService, BookService>();
 builder.Services.AddScoped<IMemberService, MemberService>();
 builder.Services.AddScoped<ITransactionService, TransactionService>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IFileReportService, FileReportService>();
 
 builder.Services
     .AddAuthentication( JwtBearerDefaults.AuthenticationScheme )

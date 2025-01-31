@@ -1,5 +1,6 @@
 ﻿using Backend.Data;
 using Backend.DTOs;
+using Backend.Helper;
 using Backend.Models;
 using Backend.Services.Interfaces;
 
@@ -113,7 +114,7 @@ namespace Backend.Services
                 }
 
                 // Validasi file ukuran
-                if (imageFile.Length > MegaToByte(2))
+                if (imageFile.Length > Utility.MegaToByte(2))
                 {
                     throw new Exception("Size image so large!");
                 }
@@ -129,11 +130,6 @@ namespace Backend.Services
             {
                 throw new Exception(ex.Message);
             }
-        }
-
-        private long MegaToByte(double megaSize)
-        {
-            return (long)(megaSize * 1048576);
         }
     }
 }

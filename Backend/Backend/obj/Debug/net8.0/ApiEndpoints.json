@@ -269,6 +269,32 @@
     ]
   },
   {
+    "ContainingType": "Backend.Controllers.FileReportController",
+    "Method": "UploadReportPdf",
+    "RelativePath": "api/reports",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "ReportDate",
+        "Type": "System.DateOnly",
+        "IsRequired": false
+      },
+      {
+        "Name": "pdf",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Backend.Controllers.TransactionController",
     "Method": "GetAllTransactions",
     "RelativePath": "api/transactions",
@@ -442,6 +468,16 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "Backend.Controllers.TransactionController",
+    "Method": "GetTestData",
+    "RelativePath": "api/transactions/test-data",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Backend.Controllers.UserController",

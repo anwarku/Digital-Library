@@ -15,6 +15,7 @@ namespace Backend.Data
         public DbSet<Transaction> Transactions { get; set; }
         public DbSet<DetailTransaction> DetailTransactions { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<FileReport> FileReports { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
