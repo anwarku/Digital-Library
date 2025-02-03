@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "C0zsW5pWO/xzKykmhwIupg1u8ssCx9ts5KlZhPd4UI8=",
+  "Hash": "UeI+3ylFXIhI8D1PlhiYZzalK6S0S6KuoDzp8wp8jIw=",
   "Source": "Backend",
   "BasePath": "_content/Backend",
   "Mode": "Default",
@@ -36,6 +36,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\9ef97116-ab18-4ed1-8f18-d9f76b7fbf1d.jpg"
+    },
+    {
+      "Identity": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\pdf\\dbdf3c4f-942c-4c88-9bee-0e95b6abe2f7.pdf",
+      "SourceId": "Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\",
+      "BasePath": "_content/Backend",
+      "RelativePath": "pdf/dbdf3c4f-942c-4c88-9bee-0e95b6abe2f7#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bbtc9l7pxz",
+      "Integrity": "Z+z5DmLZhVEd3qke5597VQMWU8J3qS0TVwiKxUYyNMw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\pdf\\dbdf3c4f-942c-4c88-9bee-0e95b6abe2f7.pdf"
     }
   ],
   "Endpoints": [
@@ -118,6 +139,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-iWmX0iJYgbLWQxEmCutT5q44n2Mq3LGvNCWB0lOepX8="
+        }
+      ]
+    },
+    {
+      "Route": "pdf/dbdf3c4f-942c-4c88-9bee-0e95b6abe2f7.bbtc9l7pxz.pdf",
+      "AssetFile": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\pdf\\dbdf3c4f-942c-4c88-9bee-0e95b6abe2f7.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1177102"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Z+z5DmLZhVEd3qke5597VQMWU8J3qS0TVwiKxUYyNMw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 31 Jan 2025 08:50:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bbtc9l7pxz"
+        },
+        {
+          "Name": "label",
+          "Value": "pdf/dbdf3c4f-942c-4c88-9bee-0e95b6abe2f7.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Z+z5DmLZhVEd3qke5597VQMWU8J3qS0TVwiKxUYyNMw="
+        }
+      ]
+    },
+    {
+      "Route": "pdf/dbdf3c4f-942c-4c88-9bee-0e95b6abe2f7.pdf",
+      "AssetFile": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\pdf\\dbdf3c4f-942c-4c88-9bee-0e95b6abe2f7.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1177102"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Z+z5DmLZhVEd3qke5597VQMWU8J3qS0TVwiKxUYyNMw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 31 Jan 2025 08:50:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Z+z5DmLZhVEd3qke5597VQMWU8J3qS0TVwiKxUYyNMw="
         }
       ]
     }

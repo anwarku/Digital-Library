@@ -81,7 +81,6 @@ export class LoginComponent implements OnInit {
       (res: any) => {
         // Jika berhasil maka decode token
         const token = res.token;
-        // const decodedToken = jwtDecode<any>(token);
         const decodedToken = jwtDecode<any>(token);
 
         // Simpan akses token ke dalam local storage

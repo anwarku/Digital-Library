@@ -1,12 +1,14 @@
 ﻿using Backend.DTOs;
+using Backend.Models;
 
 namespace Backend.Services.Interfaces
 {
     public interface IFileReportService
     {
-        void DownloadReportPdf(int idFileReport, string typeFile);
-        void UploadReportPdf(AddFileReportDto addFileReport, IFormFile pdf);
-        void UploadReportXlsx(AddFileReportDto addFileReport,IFormFile xlsx);
+        List<GetFileReportsDto> GetAllFileReport();
+        FileReport GetFileReportById(int id);
+        void UploadReport(AddFileReportDto addFileReport, IFormFile pdf);
+        void DeleteReport(int id);
         bool FileReportIsExist(int idFileReport);
     }
 }

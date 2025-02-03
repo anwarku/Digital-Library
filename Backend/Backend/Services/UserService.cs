@@ -23,7 +23,12 @@ namespace Backend.Services
             _configuration = configuration;
         }
 
-        public UserHasLoggedDto GetUserById(Guid id)
+        public User GetUserById(Guid id)
+        {
+            return _context.Users.FirstOrDefault(x => x.Id == id);
+        }
+
+        public UserHasLoggedDto GetUserLoggedById(Guid id)
         {
             var user = _context.Users.Select(u => new UserHasLoggedDto()
             {
@@ -39,7 +44,7 @@ namespace Backend.Services
         public string UserLogin(UserLoginDto userLoginDto)
         {
             var passwordHasher = new PasswordHasher<object>();
-            var user = _context.Users.FirstOrDefault(u => u.UserName.ToLower().Trim() == userLoginDto.UserName.ToLower().Trim());
+            User user = _context.Users.FirstOrDefault(u => u.UserName.ToLower().Trim() == userLoginDto.UserName.ToLower().Trim());
             //var user = _context.Users.First(u => u.UserName == userLoginDto.UserName);
             var verificatonResult = passwordHasher.VerifyHashedPassword(null, user.Password, userLoginDto.Password);
 
@@ -49,7 +54,7 @@ namespace Backend.Services
                 throw new Exception("Invalid username and password");
             }
 
-            return GenerateAccessToken(user.UserName, user.Name);
+            return GenerateAccessToken(user);
         }
 
         public void UserRegistration(UserRegisterDto userRegisterDto)
@@ -72,13 +77,14 @@ namespace Backend.Services
             return _context.Users.Any(u => u.UserName == username);
         }
 
-        private string GenerateAccessToken(string username, string name)
+        private string GenerateAccessToken(User user)
         {
             var claims = new[]
             {
-                new Claim(JwtRegisteredClaimNames.Sub, username),
+                new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                new Claim("name", name)
+                new Claim("name", user.Name),
+                new Claim("userId", user.Id.ToString())
             };
 
             var key = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(_configuration["JwtSettings:Key"]));

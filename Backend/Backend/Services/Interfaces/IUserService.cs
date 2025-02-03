@@ -6,7 +6,8 @@ namespace Backend.Services.Interfaces
 {
     public interface IUserService
     {
-        UserHasLoggedDto GetUserById(Guid id);
+        User GetUserById(Guid id);
+        UserHasLoggedDto GetUserLoggedById(Guid id);
         string UserLogin(UserLoginDto userLoginDto);
         void UserRegistration(UserRegisterDto userRegisterDto);
         bool UserExistByUsername(string username);

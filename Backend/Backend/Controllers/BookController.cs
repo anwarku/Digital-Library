@@ -101,8 +101,14 @@ namespace Backend.Controllers
         [Route("test")]
         public IActionResult PostTest()
         {
+            var data = Request.Headers.Authorization;
+            var token = Convert.ToString(data).Split(' ')[1];
+            //var decoded = 
+
             DateTime today = new DateTime();
             today = DateTime.Now;
+            var idGeneral = Guid.NewGuid();
+            var idString = Guid.NewGuid().ToString();
 
             return Ok(new {Data = "Hello world"});
         }

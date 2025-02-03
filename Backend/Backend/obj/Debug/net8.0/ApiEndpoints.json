@@ -270,8 +270,60 @@
   },
   {
     "ContainingType": "Backend.Controllers.FileReportController",
-    "Method": "UploadReportPdf",
+    "Method": "GetAllFileReport",
     "RelativePath": "api/reports",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Backend.DTOs.GetFileReportsDto, Backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Backend.Controllers.FileReportController",
+    "Method": "DeleteReport",
+    "RelativePath": "api/reports/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend.Controllers.FileReportController",
+    "Method": "DownloadFile",
+    "RelativePath": "api/reports/download/{idFileReport}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idFileReport",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend.Controllers.FileReportController",
+    "Method": "UploadReport",
+    "RelativePath": "api/reports/upload",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -287,7 +339,7 @@
         "IsRequired": false
       },
       {
-        "Name": "pdf",
+        "Name": "file",
         "Type": "Microsoft.AspNetCore.Http.IFormFile",
         "IsRequired": false
       }

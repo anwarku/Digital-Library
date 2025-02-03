@@ -93,10 +93,13 @@
           ></label>
           <input
             cFormControl
-            id="formFile"
+            #formFile
             (change)="onChangeImage($event)"
             type="file"
           />
+          <span class="text-danger" style="font-size: 14px"
+            >Max size 2 MB, only jpg, jpeg, and png file
+          </span>
         </div>
 
         <button cButton type="submit">Submit Member</button>

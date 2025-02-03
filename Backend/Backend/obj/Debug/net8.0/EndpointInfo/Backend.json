@@ -233,6 +233,67 @@
       }
     },
     "/api/reports": {
+      "get": {
+        "tags": [
+          "FileReport"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetFileReportsDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetFileReportsDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetFileReportsDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/reports/download/{idFileReport}": {
+      "get": {
+        "tags": [
+          "FileReport"
+        ],
+        "parameters": [
+          {
+            "name": "idFileReport",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/reports/upload": {
       "post": {
         "tags": [
           "FileReport"
@@ -255,7 +316,7 @@
                     "type": "string",
                     "format": "date"
                   },
-                  "pdf": {
+                  "file": {
                     "type": "string",
                     "format": "binary"
                   }
@@ -268,13 +329,36 @@
                 "ReportDate": {
                   "style": "form"
                 },
-                "pdf": {
+                "file": {
                   "style": "form"
                 }
               }
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/reports/{id}": {
+      "delete": {
+        "tags": [
+          "FileReport"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -1044,6 +1128,32 @@
           },
           "books": {
             "$ref": "#/components/schemas/BookTransactionDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetFileReportsDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "typeFile": {
+            "type": "string",
+            "nullable": true
+          },
+          "reportDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
           }
         },
         "additionalProperties": false

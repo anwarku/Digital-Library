@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\images\\9ef97116-ab18-4ed1-8f18-d9f76b7fbf1d.jpg"
     },
     {
+      "Id": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\pdf\\dbdf3c4f-942c-4c88-9bee-0e95b6abe2f7.pdf",
+      "PackagePath": "staticwebassets\\pdf\\dbdf3c4f-942c-4c88-9bee-0e95b6abe2f7.pdf"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Backend.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },

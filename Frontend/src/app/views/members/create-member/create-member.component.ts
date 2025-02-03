@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import {
   ButtonDirective,
   ColComponent,
@@ -69,6 +69,9 @@ export class CreateMemberComponent implements OnInit {
     'Hydrogeologist',
   ];
 
+  @ViewChild('formFile')
+  inputImageMember: ElementRef;
+
   constructor(
     private memberService: MemberService,
     private globalService: GlobalService
@@ -103,24 +106,29 @@ export class CreateMemberComponent implements OnInit {
   }
 
   onSubmitNewMember() {
-    console.log(this.newMember.value);
-    this.newMember.reset();
+    // console.log(this.newMember.value);
 
-    // this.memberService
-    //   .storeMember(this.newMember.value, this.fileImage)
-    //   .subscribe(
-    //     // when success
-    //     (res: any) => {
-    //       // do something
-    //       this.globalService.sweetAlert.fire({
-    //         icon: 'success',
-    //         title: 'Member',
-    //       });
-    //     },
-    //     // when error
-    //     (err: any) => {
-    //       // do something when error
-    //     }
-    //   );
+    this.memberService
+      .storeMember(this.newMember.value, this.fileImage)
+      .subscribe(
+        // when success
+        (res: any) => {
+          // do something
+          this.globalService.sweetAlert.fire({
+            icon: 'success',
+            title: 'Member has been created',
+          });
+          this.newMember.reset();
+          this.inputImageMember.nativeElement.value = '';
+        },
+        // when error
+        (err: any) => {
+          // do something when error
+          this.globalService.sweetAlert.fire({
+            icon: 'error',
+            title: err.error.message,
+          });
+        }
+      );
   }
 }
