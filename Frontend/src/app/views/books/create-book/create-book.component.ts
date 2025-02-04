@@ -25,7 +25,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 @Component({
   selector: 'app-create-book',
   imports: [
-    // NgIf,
+    NgIf,
     RowComponent,
     ColComponent,
     FormDirective,
@@ -35,13 +35,14 @@ import { NgxSpinnerService } from 'ngx-spinner';
     ReactiveFormsModule,
     RequiredComponent,
     ButtonDirective,
-    FormFeedbackComponent,
   ],
   templateUrl: './create-book.component.html',
   styleUrl: './create-book.component.scss',
 })
 export class CreateBookComponent implements OnInit {
   newBookForm!: FormGroup;
+  hasError: boolean = false;
+  customErrorMessage: any = {};
 
   constructor(
     private route: ActivatedRoute,
@@ -91,40 +92,66 @@ export class CreateBookComponent implements OnInit {
     // Mengecek apakah validasi sudah sukses
     // Jika belum valid, kasih alert
     if (!this.newBookForm.valid) {
+      this.spinner.hide();
       this.globalService.sweetAlert.fire({
-        icon: 'error',
+        icon: 'warning',
         title: 'Pastikan semua inputan sudah benar!',
       });
+      this.hasError = true;
     }
     // Jika sudah valid, kirim request post ke backend
     else {
+      this.hasError = false;
       // Bersihkan data, terutama convert year dan stock ke number
       const data = this.newBookForm.value;
-      data['publishYear'] = Number(data['publishYear']);
-      data['stock'] = Number(data['stock']);
+      const isNumberPublishYear = Number(data['publishYear']);
+      const isNumberStock = Number(data['stock']);
 
-      // console.log(data);
+      // Mengecek apakah field publishYear dan stock adalah angka
+      isNumberPublishYear
+        ? delete this.customErrorMessage.publishYear
+        : (this.customErrorMessage['publishYear'] = 'Must be number');
 
-      // Kirim permintaan HTTP ke backend POST
-      this.bookService.storeBook(data).subscribe(
-        // Ketika success response
-        (res: any) => {
-          this.spinner.hide();
-          // this.newBookForm.reset();
-          this.router.navigate(['/books', 'all-books'], {
-            state: {
-              message: 'Berhasil menambahkan buku baru',
-            },
-          });
-        },
-        // Ketika error response
-        (err: any) => {
-          this.globalService.sweetAlert.fire({
-            icon: 'error',
-            title: 'Gagal menambahkan data baru!',
-          });
-        }
-      );
+      isNumberStock
+        ? delete this.customErrorMessage.stock
+        : (this.customErrorMessage['stock'] = 'Must be number');
+
+      // Jika salah satu atau keduanya bukan angka
+      if (!isNumberPublishYear || !isNumberStock) {
+        // Kita bikin variabel has error jadi true
+        this.hasError = true;
+        this.spinner.hide();
+      }
+      // Jika sudah valid semuanya
+      else {
+        // Kita replace stock dan publishYear jadi number
+        // Karena server backend menerima field tersebut sebagai integer
+        data['stock'] = isNumberStock;
+        data['publishYear'] = isNumberPublishYear;
+
+        // Kirim permintaan HTTP ke backend POST
+        this.bookService.storeBook(data).subscribe(
+          // Ketika success response
+          (res: any) => {
+            this.spinner.hide();
+            this.router.navigate(['/books', 'all-books'], {
+              state: {
+                message: 'Berhasil menambahkan buku baru',
+              },
+            });
+          },
+          // Ketika error response
+          (err: any) => {
+            this.spinner.hide();
+            this.globalService.sweetAlert.fire({
+              icon: 'error',
+              title: 'Gagal menambahkan data buku!',
+            });
+            console.log(err.error.errors);
+            console.log('status', err.error.status);
+          }
+        );
+      }
     }
   }
 }
