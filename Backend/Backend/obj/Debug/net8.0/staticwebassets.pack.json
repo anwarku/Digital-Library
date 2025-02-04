@@ -1,12 +1,44 @@
 {
   "Files": [
     {
+      "Id": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\images\\7a8c8c19-a13c-49dc-ac20-2ce3d64a36ba.jpg",
+      "PackagePath": "staticwebassets\\images\\7a8c8c19-a13c-49dc-ac20-2ce3d64a36ba.jpg"
+    },
+    {
       "Id": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\images\\9ef97116-ab18-4ed1-8f18-d9f76b7fbf1d.jpg",
       "PackagePath": "staticwebassets\\images\\9ef97116-ab18-4ed1-8f18-d9f76b7fbf1d.jpg"
     },
     {
+      "Id": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\images\\9f426fad-d401-4da7-a3e4-c4d4dda4a7bd.jpg",
+      "PackagePath": "staticwebassets\\images\\9f426fad-d401-4da7-a3e4-c4d4dda4a7bd.jpg"
+    },
+    {
+      "Id": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\images\\b7279452-67a7-42ec-b19f-19212e206ae7.jpg",
+      "PackagePath": "staticwebassets\\images\\b7279452-67a7-42ec-b19f-19212e206ae7.jpg"
+    },
+    {
+      "Id": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\images\\d639a857-e70c-46f0-83eb-93d65ea31c3f.jpg",
+      "PackagePath": "staticwebassets\\images\\d639a857-e70c-46f0-83eb-93d65ea31c3f.jpg"
+    },
+    {
+      "Id": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\pdf\\8f8874e3-9fe8-4dc0-abd7-fa05c75836e6.pdf",
+      "PackagePath": "staticwebassets\\pdf\\8f8874e3-9fe8-4dc0-abd7-fa05c75836e6.pdf"
+    },
+    {
       "Id": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\pdf\\dbdf3c4f-942c-4c88-9bee-0e95b6abe2f7.pdf",
       "PackagePath": "staticwebassets\\pdf\\dbdf3c4f-942c-4c88-9bee-0e95b6abe2f7.pdf"
+    },
+    {
+      "Id": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\xlsx\\a2ba74db-a556-424a-b9a8-c0e7a3500f07.xlsx",
+      "PackagePath": "staticwebassets\\xlsx\\a2ba74db-a556-424a-b9a8-c0e7a3500f07.xlsx"
+    },
+    {
+      "Id": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\xlsx\\b045c9c7-576d-43fa-a000-9b15d7b8b6d0.xlsx",
+      "PackagePath": "staticwebassets\\xlsx\\b045c9c7-576d-43fa-a000-9b15d7b8b6d0.xlsx"
+    },
+    {
+      "Id": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\xlsx\\d350c851-5855-4f69-b6d5-ac02a0ec0833.xlsx",
+      "PackagePath": "staticwebassets\\xlsx\\d350c851-5855-4f69-b6d5-ac02a0ec0833.xlsx"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Backend.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

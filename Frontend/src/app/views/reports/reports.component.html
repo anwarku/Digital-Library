@@ -15,7 +15,7 @@
           </tr>
         </thead>
         <tbody>
-          @for (report of reports; track $index) {
+          @for (report of reports; track report.id) {
           <tr>
             <th scope="row">{{ $index + 1 }}.</th>
             <td>{{ report.name }}</td>
@@ -25,9 +25,15 @@
               <button
                 cButton
                 type="button"
-                (click)="onDownloadReport(report.id, report.typeFile)"
+                (click)="
+                  onDownloadReport(
+                    report.id,
+                    report.typeFile,
+                    report.reportDate
+                  )
+                "
               >
-                Download
+                Download {{ report.typeFile }}
               </button>
             </td>
           </tr>

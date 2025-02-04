@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UeI+3ylFXIhI8D1PlhiYZzalK6S0S6KuoDzp8wp8jIw=",
+  "Hash": "iBeH7qZvutWoBDk5ka5+kKfrQI+dLRPGdRXt2hyjyJM=",
   "Source": "Backend",
   "BasePath": "_content/Backend",
   "Mode": "Default",
@@ -16,6 +16,27 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\images\\7a8c8c19-a13c-49dc-ac20-2ce3d64a36ba.jpg",
+      "SourceId": "Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\",
+      "BasePath": "_content/Backend",
+      "RelativePath": "images/7a8c8c19-a13c-49dc-ac20-2ce3d64a36ba#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "zf22u26vbb",
+      "Integrity": "IUG9Irg0QNa7dCdVmi82fxUgcO+IEp12mavTitVa1P0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\7a8c8c19-a13c-49dc-ac20-2ce3d64a36ba.jpg"
+    },
     {
       "Identity": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\images\\9ef97116-ab18-4ed1-8f18-d9f76b7fbf1d.jpg",
       "SourceId": "Backend",
@@ -38,6 +59,90 @@
       "OriginalItemSpec": "wwwroot\\images\\9ef97116-ab18-4ed1-8f18-d9f76b7fbf1d.jpg"
     },
     {
+      "Identity": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\images\\9f426fad-d401-4da7-a3e4-c4d4dda4a7bd.jpg",
+      "SourceId": "Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\",
+      "BasePath": "_content/Backend",
+      "RelativePath": "images/9f426fad-d401-4da7-a3e4-c4d4dda4a7bd#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "84btrc9m1a",
+      "Integrity": "eGcd/85COVHhIo7rqQXIoAC/j2rkmRkZ57f9CD3XCHc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\9f426fad-d401-4da7-a3e4-c4d4dda4a7bd.jpg"
+    },
+    {
+      "Identity": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\images\\b7279452-67a7-42ec-b19f-19212e206ae7.jpg",
+      "SourceId": "Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\",
+      "BasePath": "_content/Backend",
+      "RelativePath": "images/b7279452-67a7-42ec-b19f-19212e206ae7#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "zf22u26vbb",
+      "Integrity": "IUG9Irg0QNa7dCdVmi82fxUgcO+IEp12mavTitVa1P0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\b7279452-67a7-42ec-b19f-19212e206ae7.jpg"
+    },
+    {
+      "Identity": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\images\\d639a857-e70c-46f0-83eb-93d65ea31c3f.jpg",
+      "SourceId": "Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\",
+      "BasePath": "_content/Backend",
+      "RelativePath": "images/d639a857-e70c-46f0-83eb-93d65ea31c3f#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "84btrc9m1a",
+      "Integrity": "eGcd/85COVHhIo7rqQXIoAC/j2rkmRkZ57f9CD3XCHc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\d639a857-e70c-46f0-83eb-93d65ea31c3f.jpg"
+    },
+    {
+      "Identity": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\pdf\\8f8874e3-9fe8-4dc0-abd7-fa05c75836e6.pdf",
+      "SourceId": "Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\",
+      "BasePath": "_content/Backend",
+      "RelativePath": "pdf/8f8874e3-9fe8-4dc0-abd7-fa05c75836e6#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bbtc9l7pxz",
+      "Integrity": "Z+z5DmLZhVEd3qke5597VQMWU8J3qS0TVwiKxUYyNMw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\pdf\\8f8874e3-9fe8-4dc0-abd7-fa05c75836e6.pdf"
+    },
+    {
       "Identity": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\pdf\\dbdf3c4f-942c-4c88-9bee-0e95b6abe2f7.pdf",
       "SourceId": "Backend",
       "SourceType": "Discovered",
@@ -57,9 +162,154 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\pdf\\dbdf3c4f-942c-4c88-9bee-0e95b6abe2f7.pdf"
+    },
+    {
+      "Identity": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\xlsx\\a2ba74db-a556-424a-b9a8-c0e7a3500f07.xlsx",
+      "SourceId": "Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\",
+      "BasePath": "_content/Backend",
+      "RelativePath": "xlsx/a2ba74db-a556-424a-b9a8-c0e7a3500f07#[.{fingerprint}]?.xlsx",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "kkpp2odv0m",
+      "Integrity": "TIDF0kl0l/3TY0+PWvIpPMuFy53kMveTJqqCPa7u0DI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\xlsx\\a2ba74db-a556-424a-b9a8-c0e7a3500f07.xlsx"
+    },
+    {
+      "Identity": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\xlsx\\b045c9c7-576d-43fa-a000-9b15d7b8b6d0.xlsx",
+      "SourceId": "Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\",
+      "BasePath": "_content/Backend",
+      "RelativePath": "xlsx/b045c9c7-576d-43fa-a000-9b15d7b8b6d0#[.{fingerprint}]?.xlsx",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1cdxh11lit",
+      "Integrity": "wWZWnw7625Y6umzmbsYRsQvW6t7nE7jKIZkUyPAjDZs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\xlsx\\b045c9c7-576d-43fa-a000-9b15d7b8b6d0.xlsx"
+    },
+    {
+      "Identity": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\xlsx\\d350c851-5855-4f69-b6d5-ac02a0ec0833.xlsx",
+      "SourceId": "Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\",
+      "BasePath": "_content/Backend",
+      "RelativePath": "xlsx/d350c851-5855-4f69-b6d5-ac02a0ec0833#[.{fingerprint}]?.xlsx",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1cdxh11lit",
+      "Integrity": "wWZWnw7625Y6umzmbsYRsQvW6t7nE7jKIZkUyPAjDZs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\xlsx\\d350c851-5855-4f69-b6d5-ac02a0ec0833.xlsx"
     }
   ],
   "Endpoints": [
+    {
+      "Route": "images/7a8c8c19-a13c-49dc-ac20-2ce3d64a36ba.jpg",
+      "AssetFile": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\images\\7a8c8c19-a13c-49dc-ac20-2ce3d64a36ba.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2000304"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IUG9Irg0QNa7dCdVmi82fxUgcO+IEp12mavTitVa1P0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 03 Feb 2025 08:23:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-IUG9Irg0QNa7dCdVmi82fxUgcO+IEp12mavTitVa1P0="
+        }
+      ]
+    },
+    {
+      "Route": "images/7a8c8c19-a13c-49dc-ac20-2ce3d64a36ba.zf22u26vbb.jpg",
+      "AssetFile": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\images\\7a8c8c19-a13c-49dc-ac20-2ce3d64a36ba.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2000304"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IUG9Irg0QNa7dCdVmi82fxUgcO+IEp12mavTitVa1P0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 03 Feb 2025 08:23:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zf22u26vbb"
+        },
+        {
+          "Name": "label",
+          "Value": "images/7a8c8c19-a13c-49dc-ac20-2ce3d64a36ba.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IUG9Irg0QNa7dCdVmi82fxUgcO+IEp12mavTitVa1P0="
+        }
+      ]
+    },
     {
       "Route": "images/9ef97116-ab18-4ed1-8f18-d9f76b7fbf1d.jpg",
       "AssetFile": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\images\\9ef97116-ab18-4ed1-8f18-d9f76b7fbf1d.jpg",
@@ -143,6 +393,334 @@
       ]
     },
     {
+      "Route": "images/9f426fad-d401-4da7-a3e4-c4d4dda4a7bd.84btrc9m1a.jpg",
+      "AssetFile": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\images\\9f426fad-d401-4da7-a3e4-c4d4dda4a7bd.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "200950"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eGcd/85COVHhIo7rqQXIoAC/j2rkmRkZ57f9CD3XCHc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 03 Feb 2025 08:05:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "84btrc9m1a"
+        },
+        {
+          "Name": "label",
+          "Value": "images/9f426fad-d401-4da7-a3e4-c4d4dda4a7bd.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eGcd/85COVHhIo7rqQXIoAC/j2rkmRkZ57f9CD3XCHc="
+        }
+      ]
+    },
+    {
+      "Route": "images/9f426fad-d401-4da7-a3e4-c4d4dda4a7bd.jpg",
+      "AssetFile": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\images\\9f426fad-d401-4da7-a3e4-c4d4dda4a7bd.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "200950"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eGcd/85COVHhIo7rqQXIoAC/j2rkmRkZ57f9CD3XCHc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 03 Feb 2025 08:05:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-eGcd/85COVHhIo7rqQXIoAC/j2rkmRkZ57f9CD3XCHc="
+        }
+      ]
+    },
+    {
+      "Route": "images/b7279452-67a7-42ec-b19f-19212e206ae7.jpg",
+      "AssetFile": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\images\\b7279452-67a7-42ec-b19f-19212e206ae7.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2000304"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IUG9Irg0QNa7dCdVmi82fxUgcO+IEp12mavTitVa1P0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 03 Feb 2025 08:17:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-IUG9Irg0QNa7dCdVmi82fxUgcO+IEp12mavTitVa1P0="
+        }
+      ]
+    },
+    {
+      "Route": "images/b7279452-67a7-42ec-b19f-19212e206ae7.zf22u26vbb.jpg",
+      "AssetFile": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\images\\b7279452-67a7-42ec-b19f-19212e206ae7.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2000304"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IUG9Irg0QNa7dCdVmi82fxUgcO+IEp12mavTitVa1P0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 03 Feb 2025 08:17:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zf22u26vbb"
+        },
+        {
+          "Name": "label",
+          "Value": "images/b7279452-67a7-42ec-b19f-19212e206ae7.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IUG9Irg0QNa7dCdVmi82fxUgcO+IEp12mavTitVa1P0="
+        }
+      ]
+    },
+    {
+      "Route": "images/d639a857-e70c-46f0-83eb-93d65ea31c3f.84btrc9m1a.jpg",
+      "AssetFile": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\images\\d639a857-e70c-46f0-83eb-93d65ea31c3f.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "200950"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eGcd/85COVHhIo7rqQXIoAC/j2rkmRkZ57f9CD3XCHc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 03 Feb 2025 07:55:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "84btrc9m1a"
+        },
+        {
+          "Name": "label",
+          "Value": "images/d639a857-e70c-46f0-83eb-93d65ea31c3f.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eGcd/85COVHhIo7rqQXIoAC/j2rkmRkZ57f9CD3XCHc="
+        }
+      ]
+    },
+    {
+      "Route": "images/d639a857-e70c-46f0-83eb-93d65ea31c3f.jpg",
+      "AssetFile": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\images\\d639a857-e70c-46f0-83eb-93d65ea31c3f.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "200950"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eGcd/85COVHhIo7rqQXIoAC/j2rkmRkZ57f9CD3XCHc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 03 Feb 2025 07:55:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-eGcd/85COVHhIo7rqQXIoAC/j2rkmRkZ57f9CD3XCHc="
+        }
+      ]
+    },
+    {
+      "Route": "pdf/8f8874e3-9fe8-4dc0-abd7-fa05c75836e6.bbtc9l7pxz.pdf",
+      "AssetFile": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\pdf\\8f8874e3-9fe8-4dc0-abd7-fa05c75836e6.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1177102"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Z+z5DmLZhVEd3qke5597VQMWU8J3qS0TVwiKxUYyNMw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 03 Feb 2025 07:40:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bbtc9l7pxz"
+        },
+        {
+          "Name": "label",
+          "Value": "pdf/8f8874e3-9fe8-4dc0-abd7-fa05c75836e6.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Z+z5DmLZhVEd3qke5597VQMWU8J3qS0TVwiKxUYyNMw="
+        }
+      ]
+    },
+    {
+      "Route": "pdf/8f8874e3-9fe8-4dc0-abd7-fa05c75836e6.pdf",
+      "AssetFile": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\pdf\\8f8874e3-9fe8-4dc0-abd7-fa05c75836e6.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1177102"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Z+z5DmLZhVEd3qke5597VQMWU8J3qS0TVwiKxUYyNMw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 03 Feb 2025 07:40:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Z+z5DmLZhVEd3qke5597VQMWU8J3qS0TVwiKxUYyNMw="
+        }
+      ]
+    },
+    {
       "Route": "pdf/dbdf3c4f-942c-4c88-9bee-0e95b6abe2f7.bbtc9l7pxz.pdf",
       "AssetFile": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\pdf\\dbdf3c4f-942c-4c88-9bee-0e95b6abe2f7.pdf",
       "Selectors": [],
@@ -221,6 +799,252 @@
         {
           "Name": "integrity",
           "Value": "sha256-Z+z5DmLZhVEd3qke5597VQMWU8J3qS0TVwiKxUYyNMw="
+        }
+      ]
+    },
+    {
+      "Route": "xlsx/a2ba74db-a556-424a-b9a8-c0e7a3500f07.kkpp2odv0m.xlsx",
+      "AssetFile": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\xlsx\\a2ba74db-a556-424a-b9a8-c0e7a3500f07.xlsx",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "21949"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TIDF0kl0l/3TY0+PWvIpPMuFy53kMveTJqqCPa7u0DI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Feb 2025 00:59:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kkpp2odv0m"
+        },
+        {
+          "Name": "label",
+          "Value": "xlsx/a2ba74db-a556-424a-b9a8-c0e7a3500f07.xlsx"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-TIDF0kl0l/3TY0+PWvIpPMuFy53kMveTJqqCPa7u0DI="
+        }
+      ]
+    },
+    {
+      "Route": "xlsx/a2ba74db-a556-424a-b9a8-c0e7a3500f07.xlsx",
+      "AssetFile": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\xlsx\\a2ba74db-a556-424a-b9a8-c0e7a3500f07.xlsx",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "21949"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TIDF0kl0l/3TY0+PWvIpPMuFy53kMveTJqqCPa7u0DI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Feb 2025 00:59:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-TIDF0kl0l/3TY0+PWvIpPMuFy53kMveTJqqCPa7u0DI="
+        }
+      ]
+    },
+    {
+      "Route": "xlsx/b045c9c7-576d-43fa-a000-9b15d7b8b6d0.1cdxh11lit.xlsx",
+      "AssetFile": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\xlsx\\b045c9c7-576d-43fa-a000-9b15d7b8b6d0.xlsx",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "29019"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wWZWnw7625Y6umzmbsYRsQvW6t7nE7jKIZkUyPAjDZs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Feb 2025 01:03:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1cdxh11lit"
+        },
+        {
+          "Name": "label",
+          "Value": "xlsx/b045c9c7-576d-43fa-a000-9b15d7b8b6d0.xlsx"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wWZWnw7625Y6umzmbsYRsQvW6t7nE7jKIZkUyPAjDZs="
+        }
+      ]
+    },
+    {
+      "Route": "xlsx/b045c9c7-576d-43fa-a000-9b15d7b8b6d0.xlsx",
+      "AssetFile": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\xlsx\\b045c9c7-576d-43fa-a000-9b15d7b8b6d0.xlsx",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "29019"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wWZWnw7625Y6umzmbsYRsQvW6t7nE7jKIZkUyPAjDZs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Feb 2025 01:03:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wWZWnw7625Y6umzmbsYRsQvW6t7nE7jKIZkUyPAjDZs="
+        }
+      ]
+    },
+    {
+      "Route": "xlsx/d350c851-5855-4f69-b6d5-ac02a0ec0833.1cdxh11lit.xlsx",
+      "AssetFile": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\xlsx\\d350c851-5855-4f69-b6d5-ac02a0ec0833.xlsx",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "29019"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wWZWnw7625Y6umzmbsYRsQvW6t7nE7jKIZkUyPAjDZs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 03 Feb 2025 07:39:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1cdxh11lit"
+        },
+        {
+          "Name": "label",
+          "Value": "xlsx/d350c851-5855-4f69-b6d5-ac02a0ec0833.xlsx"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wWZWnw7625Y6umzmbsYRsQvW6t7nE7jKIZkUyPAjDZs="
+        }
+      ]
+    },
+    {
+      "Route": "xlsx/d350c851-5855-4f69-b6d5-ac02a0ec0833.xlsx",
+      "AssetFile": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\wwwroot\\xlsx\\d350c851-5855-4f69-b6d5-ac02a0ec0833.xlsx",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "29019"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wWZWnw7625Y6umzmbsYRsQvW6t7nE7jKIZkUyPAjDZs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 03 Feb 2025 07:39:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wWZWnw7625Y6umzmbsYRsQvW6t7nE7jKIZkUyPAjDZs="
         }
       ]
     }

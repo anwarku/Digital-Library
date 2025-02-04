@@ -104,6 +104,7 @@ export class ReportsComponent implements OnInit {
               icon: 'success',
               title: 'File has been uploaded!',
             });
+            this.getAllReport();
           },
           // Error
           (err: any) => {
@@ -121,7 +122,7 @@ export class ReportsComponent implements OnInit {
     this.isVisible = e;
   }
 
-  onDownloadReport(id: number, type: string) {
+  onDownloadReport(id: number, type: string, reportDate: Date) {
     this.reportService.downloadReportById(id).subscribe(
       // Success
       (res: Blob) => {
@@ -130,7 +131,7 @@ export class ReportsComponent implements OnInit {
         const link = document.createElement('a');
         link.setAttribute('target', '_blank');
         link.setAttribute('href', downloadUrl);
-        link.setAttribute('download', `report.${type}`);
+        link.setAttribute('download', `report_${reportDate}.${type}`);
         document.body.appendChild(link);
         link.click();
         link.remove();
@@ -149,7 +150,7 @@ export class ReportsComponent implements OnInit {
       (err: any) => {
         this.globalService.sweetAlert.fire({
           icon: 'error',
-          title: 'Failed to get data from server',
+          title: err.error.message,
         });
       }
     );

@@ -21,6 +21,7 @@ import {
 import { RequiredComponent } from './../../../components/required/required.component';
 import { MemberService } from '../../../services/member.service';
 import { GlobalService } from '../../../services/global.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-create-member',
@@ -74,7 +75,8 @@ export class CreateMemberComponent implements OnInit {
 
   constructor(
     private memberService: MemberService,
-    private globalService: GlobalService
+    private globalService: GlobalService,
+    private spinner: NgxSpinnerService
   ) {}
 
   ngOnInit(): void {}
@@ -107,7 +109,7 @@ export class CreateMemberComponent implements OnInit {
 
   onSubmitNewMember() {
     // console.log(this.newMember.value);
-
+    this.spinner.show();
     this.memberService
       .storeMember(this.newMember.value, this.fileImage)
       .subscribe(
@@ -120,9 +122,11 @@ export class CreateMemberComponent implements OnInit {
           });
           this.newMember.reset();
           this.inputImageMember.nativeElement.value = '';
+          this.spinner.hide();
         },
         // when error
         (err: any) => {
+          this.spinner.hide();
           // do something when error
           this.globalService.sweetAlert.fire({
             icon: 'error',

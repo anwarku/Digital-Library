@@ -45,7 +45,6 @@ function isOverflown(element: HTMLElement) {
     ShadowOnScrollDirective,
     ContainerComponent,
     RouterOutlet,
-    DefaultFooterComponent,
     NgxSpinnerModule,
   ],
 })

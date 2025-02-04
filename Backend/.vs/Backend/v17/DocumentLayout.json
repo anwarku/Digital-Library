@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "D:\\Latihan\\Digital-Library\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\latihan\\digital-library\\backend\\backend\\controllers\\filereportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\filereportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\latihan\\digital-library\\backend\\backend\\dtos\\addbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\dtos\\addbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\latihan\\digital-library\\backend\\backend\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\latihan\\digital-library\\backend\\backend\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\latihan\\digital-library\\backend\\backend\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\latihan\\digital-library\\backend\\backend\\services\\filereportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\services\\filereportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\latihan\\digital-library\\backend\\backend\\controllers\\filereportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\filereportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\latihan\\digital-library\\backend\\backend\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,16 +47,8 @@
       "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\transactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\latihan\\digital-library\\backend\\backend\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\latihan\\digital-library\\backend\\backend\\services\\interfaces\\ifilereportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\services\\interfaces\\ifilereportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\latihan\\digital-library\\backend\\backend\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,50 +58,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "Backend\\Services\\UserService.cs",
-              "ToolTip": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Services\\UserService.cs",
-              "RelativeToolTip": "Backend\\Services\\UserService.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAmwGQAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T08:29:17.75Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "TransactionController.cs",
-              "DocumentMoniker": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Controllers\\TransactionController.cs",
-              "RelativeDocumentMoniker": "Backend\\Controllers\\TransactionController.cs",
-              "ToolTip": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Controllers\\TransactionController.cs",
-              "RelativeToolTip": "Backend\\Controllers\\TransactionController.cs",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAuwIUAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T04:19:29.639Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "BookController.cs",
               "DocumentMoniker": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Controllers\\BookController.cs",
               "RelativeDocumentMoniker": "Backend\\Controllers\\BookController.cs",
               "ToolTip": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Controllers\\BookController.cs",
               "RelativeToolTip": "Backend\\Controllers\\BookController.cs",
-              "ViewState": "AgIAAHIAAAAAAAAAAAAmwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAAD4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-03T03:42:39.955Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "MemberController.cs",
               "DocumentMoniker": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Controllers\\MemberController.cs",
               "RelativeDocumentMoniker": "Backend\\Controllers\\MemberController.cs",
@@ -101,12 +83,11 @@
               "RelativeToolTip": "Backend\\Controllers\\MemberController.cs",
               "ViewState": "AgIAACwAAAAAAAAAAAAwwEgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T04:19:11.231Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-03T04:19:11.231Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "MemberService.cs",
               "DocumentMoniker": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Services\\MemberService.cs",
               "RelativeDocumentMoniker": "Backend\\Services\\MemberService.cs",
@@ -114,12 +95,11 @@
               "RelativeToolTip": "Backend\\Services\\MemberService.cs",
               "ViewState": "AgIAAGUAAAAAAAAAAAAAwHsAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T03:42:40.031Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-03T03:42:40.031Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "GetFileReportsDto.cs",
               "DocumentMoniker": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\DTOs\\GetFileReportsDto.cs",
               "RelativeDocumentMoniker": "Backend\\DTOs\\GetFileReportsDto.cs",
@@ -127,38 +107,100 @@
               "RelativeToolTip": "Backend\\DTOs\\GetFileReportsDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T04:06:19.854Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-03T04:06:19.854Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "FileReportController.cs",
               "DocumentMoniker": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Controllers\\FileReportController.cs",
               "RelativeDocumentMoniker": "Backend\\Controllers\\FileReportController.cs",
               "ToolTip": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Controllers\\FileReportController.cs",
               "RelativeToolTip": "Backend\\Controllers\\FileReportController.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAwwE8AAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-03T03:39:33.891Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "FileReportService.cs",
               "DocumentMoniker": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Services\\FileReportService.cs",
               "RelativeDocumentMoniker": "Backend\\Services\\FileReportService.cs",
               "ToolTip": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Services\\FileReportService.cs",
               "RelativeToolTip": "Backend\\Services\\FileReportService.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAawFYAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAIwFMAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-03T03:39:03.344Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
+              "Title": "BookService.cs",
+              "DocumentMoniker": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Services\\BookService.cs",
+              "RelativeDocumentMoniker": "Backend\\Services\\BookService.cs",
+              "ToolTip": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Services\\BookService.cs",
+              "RelativeToolTip": "Backend\\Services\\BookService.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAASwD4AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T04:11:25.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AddBookDto.cs",
+              "DocumentMoniker": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\DTOs\\AddBookDto.cs",
+              "RelativeDocumentMoniker": "Backend\\DTOs\\AddBookDto.cs",
+              "ToolTip": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\DTOs\\AddBookDto.cs",
+              "RelativeToolTip": "Backend\\DTOs\\AddBookDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T02:48:48.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TransactionController.cs",
+              "DocumentMoniker": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Controllers\\TransactionController.cs",
+              "RelativeDocumentMoniker": "Backend\\Controllers\\TransactionController.cs",
+              "ToolTip": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Controllers\\TransactionController.cs",
+              "RelativeToolTip": "Backend\\Controllers\\TransactionController.cs",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAuwIUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T04:19:29.639Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Backend\\Services\\UserService.cs",
+              "ToolTip": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Services\\UserService.cs",
+              "RelativeToolTip": "Backend\\Services\\UserService.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAmwGQAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T08:29:17.75Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Book.cs",
+              "DocumentMoniker": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Models\\Book.cs",
+              "RelativeDocumentMoniker": "Backend\\Models\\Book.cs",
+              "ToolTip": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Models\\Book.cs",
+              "RelativeToolTip": "Backend\\Models\\Book.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T02:53:40.03Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "IFileReportService.cs",
               "DocumentMoniker": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Services\\Interfaces\\IFileReportService.cs",
               "RelativeDocumentMoniker": "Backend\\Services\\Interfaces\\IFileReportService.cs",
@@ -166,21 +208,7 @@
               "RelativeToolTip": "Backend\\Services\\Interfaces\\IFileReportService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T04:09:07.685Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "BookService.cs",
-              "DocumentMoniker": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Services\\BookService.cs",
-              "RelativeDocumentMoniker": "Backend\\Services\\BookService.cs",
-              "ToolTip": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Services\\BookService.cs",
-              "RelativeToolTip": "Backend\\Services\\BookService.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T04:11:25.601Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-03T04:09:07.685Z"
             }
           ]
         }

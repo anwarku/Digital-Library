@@ -1,9 +1,6 @@
 <c-row>
   <c-col xs="12" lg="8" [offset]="{ md: 2 }">
-    <h4 class="text-center mb-3">
-      Add new book
-      {{ hasError }}
-    </h4>
+    <h4 class="text-center mb-3">Add new book</h4>
     <form cForm [formGroup]="newBookForm" (ngSubmit)="onSubmit()">
       <div class="mb-3">
         <label cLabel for="title">
@@ -29,7 +26,7 @@
           <span *ngIf="title?.hasError('required')"
             >This field is required</span
           >
-          <span *ngIf="title?.hasError('minlength')">Minimum 6 character</span>
+          <span *ngIf="title?.hasError('minlength')">Minimum 10 character</span>
         </div>
       </div>
 
@@ -95,9 +92,9 @@
           <span *ngIf="publishYear?.hasError('required')"
             >This field is required</span
           >
-          <span *ngIf="customErrorMessage.publishYear">
-            {{ customErrorMessage.publishYear }}
-          </span>
+          <span *ngIf="publishYear?.hasError('pattern')"
+            >Range year between 2019 - 2025</span
+          >
         </div>
       </div>
 
@@ -135,9 +132,9 @@
           <span *ngIf="stock?.hasError('required')"
             >This field is required</span
           >
-          <span *ngIf="customErrorMessage.stock">
-            {{ customErrorMessage.stock }}
-          </span>
+          <span *ngIf="stock?.hasError('invalidNumber')"
+            >This field must be number</span
+          >
         </div>
       </div>
 

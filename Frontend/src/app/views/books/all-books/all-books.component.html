@@ -157,7 +157,7 @@
   </c-col>
 </c-row>
 
-@for (book of books; track $index) {
+@for (book of books; track book.code) {
 <c-modal backdrop="static" id="newStock{{ book.code }}" [@.disabled]="true">
   <c-modal-header>
     <h5 cModalTitle>Add New Stock</h5>

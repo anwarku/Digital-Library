@@ -21,7 +21,9 @@ namespace Backend.Services
 
         public List<GetFileReportsDto> GetAllFileReport()
         {
-            var data = _context.FileReports.ToList();
+            var data = _context.FileReports
+                .OrderByDescending(fr => fr.ReportDate)
+                .ToList();
 
             List<GetFileReportsDto> result = new List<GetFileReportsDto>();
             foreach (var report in data) 

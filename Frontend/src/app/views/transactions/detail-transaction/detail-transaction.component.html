@@ -5,7 +5,12 @@
       <c-card-header class="d-flex justify-content-between align-items-center">
         <h5>ID : {{ transaction.id }}</h5>
         @if (transaction.status == 'Borrowed') {
-        <button (click)="onReturned(transaction.id)" type="button" cButton color="secondary">
+        <button
+          (click)="onReturned(transaction.id)"
+          type="button"
+          cButton
+          color="secondary"
+        >
           Is Returned ?
         </button>
         }
@@ -25,13 +30,15 @@
           <tr>
             <td class="py-2"># Return Date</td>
             <td class="px-2">:</td>
-            <td [ngClass]="{
+            <td
+              [ngClass]="{
                 'text-danger': transaction.returnDate == null
-              }">
+              }"
+            >
               {{
-              transaction.returnDate === null
-              ? "Not Returned Yet"
-              : (transaction.returnDate | date : "EEEE, dd MMMM y")
+                transaction.returnDate === null
+                  ? "Not Returned Yet"
+                  : (transaction.returnDate | date : "EEEE, dd MMMM y")
               }}
             </td>
           </tr>
@@ -39,9 +46,13 @@
             <td class="py-2"># Status</td>
             <td class="px-2">:</td>
             <td>
-              <c-badge class="text-white" [color]="
+              <c-badge
+                class="text-white"
+                [color]="
                   transaction.status == 'Borrowed' ? 'warning' : 'success'
-                ">{{ transaction.status }}</c-badge>
+                "
+                >{{ transaction.status }}</c-badge
+              >
             </td>
           </tr>
           <tr>
@@ -49,7 +60,8 @@
             <td class="px-2">:</td>
             <td>
               <ol class="ms-2 my-auto">
-                @for (dt of transaction.detailTransactions; track $index) {
+                @for (dt of transaction.detailTransactions; track dt.books.code)
+                {
                 <li>{{ dt.books.code }} - {{ dt.books.title }}</li>
                 }
               </ol>
@@ -57,11 +69,15 @@
           </tr>
         </table>
 
-        <a [routerLink]="
+        <a
+          [routerLink]="
             transaction.status == 'Borrowed'
               ? ['/transactions', 'borrowed']
               : ['/transactions', 'history']
-          " cButton color="primary">Back to @if (transaction.status == 'Borrowed') { Borrowed Transaction
+          "
+          cButton
+          color="primary"
+          >Back to @if (transaction.status == 'Borrowed') { Borrowed Transaction
           } @else { History Transaction }
         </a>
       </c-card-body>
