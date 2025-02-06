@@ -1,9 +1,20 @@
-import { HttpInterceptorFn } from '@angular/common/http';
+import {
+  HttpErrorResponse,
+  HttpEvent,
+  HttpEventType,
+  HttpHandlerFn,
+  HttpInterceptorFn,
+  HttpRequest,
+} from '@angular/common/http';
 import { inject } from '@angular/core';
 import { jwtDecode, JwtPayload } from 'jwt-decode';
 import { UserService } from '../services/user.service';
+import { catchError, Observable, tap, throwError } from 'rxjs';
 
-export const authInterceptor: HttpInterceptorFn = (req, next) => {
+export const authInterceptor: HttpInterceptorFn = (
+  req: HttpRequest<unknown>,
+  next: HttpHandlerFn
+): Observable<HttpEvent<unknown>> => {
   // Import service yang dibutuhkan
   const userService = inject(UserService);
 
@@ -35,7 +46,20 @@ export const authInterceptor: HttpInterceptorFn = (req, next) => {
 
       // Dan kembalikan request header yang sudah di clone
       // Yang berisikan token dalam header
-      return next(newReq);
+      return next(newReq)
+        .pipe
+        // tap((event) => {
+        //   if (event.type === HttpEventType.Response) {
+        //     console.log('ini intercept response');
+        //   }
+        // }),
+        // catchError((err: HttpErrorResponse) => {
+        //   if (err.status === 401) {
+        //     userService.userLogout();
+        //   }
+        //   return throwError(err.error.message);
+        // })
+        ();
     }
   }
   // ### END

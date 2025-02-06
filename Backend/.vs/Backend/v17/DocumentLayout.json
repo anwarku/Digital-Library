@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\Latihan\\Digital-Library\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\latihan\\digital-library\\backend\\backend\\dtos\\addbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\dtos\\addbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\latihan\\digital-library\\backend\\backend\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\latihan\\digital-library\\backend\\backend\\dtos\\addbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|solutionrelative:backend\\dtos\\addbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2DC66CCA-A72E-4BB2-BFCA-55414049C9DA}|Backend\\Backend.csproj|d:\\latihan\\digital-library\\backend\\backend\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -53,24 +53,37 @@
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 0,
+      "Orientation": 1,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "DockedHeight": 480,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "BookController.cs",
               "DocumentMoniker": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Controllers\\BookController.cs",
               "RelativeDocumentMoniker": "Backend\\Controllers\\BookController.cs",
               "ToolTip": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\Controllers\\BookController.cs",
               "RelativeToolTip": "Backend\\Controllers\\BookController.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAAAD4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAowGYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-03T03:42:39.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddBookDto.cs",
+              "DocumentMoniker": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\DTOs\\AddBookDto.cs",
+              "RelativeDocumentMoniker": "Backend\\DTOs\\AddBookDto.cs",
+              "ToolTip": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\DTOs\\AddBookDto.cs",
+              "RelativeToolTip": "Backend\\DTOs\\AddBookDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T02:48:48.198Z",
               "EditorCaption": ""
             },
             {
@@ -119,8 +132,7 @@
               "RelativeToolTip": "Backend\\Controllers\\FileReportController.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T03:39:33.891Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-03T03:39:33.891Z"
             },
             {
               "$type": "Document",
@@ -132,8 +144,7 @@
               "RelativeToolTip": "Backend\\Services\\FileReportService.cs",
               "ViewState": "AgIAAEEAAAAAAAAAAAAIwFMAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T03:39:03.344Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-03T03:39:03.344Z"
             },
             {
               "$type": "Document",
@@ -145,21 +156,7 @@
               "RelativeToolTip": "Backend\\Services\\BookService.cs",
               "ViewState": "AgIAACkAAAAAAAAAAAASwD4AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T04:11:25.601Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AddBookDto.cs",
-              "DocumentMoniker": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\DTOs\\AddBookDto.cs",
-              "RelativeDocumentMoniker": "Backend\\DTOs\\AddBookDto.cs",
-              "ToolTip": "D:\\Latihan\\Digital-Library\\Backend\\Backend\\DTOs\\AddBookDto.cs",
-              "RelativeToolTip": "Backend\\DTOs\\AddBookDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T02:48:48.198Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-03T04:11:25.601Z"
             },
             {
               "$type": "Document",
@@ -195,8 +192,7 @@
               "RelativeToolTip": "Backend\\Models\\Book.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T02:53:40.03Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-04T02:53:40.03Z"
             },
             {
               "$type": "Document",
@@ -209,6 +205,16 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-03T04:09:07.685Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 174,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

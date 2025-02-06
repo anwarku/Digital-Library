@@ -63,7 +63,6 @@ export class CreateBookComponent implements OnInit {
       publishYear: new FormControl('', [
         Validators.required,
         Validators.pattern('^(200[9-9]|20[1-2][0-9]|202[0-5])$'),
-        CustomValidator.numberValidator,
       ]),
       isbn: new FormControl(''),
       stock: new FormControl('', [
@@ -131,15 +130,10 @@ export class CreateBookComponent implements OnInit {
         (err: any) => {
           this.spinner.hide();
 
-          if (err.error.status == 400) {
-          }
-
           this.globalService.sweetAlert.fire({
             icon: 'error',
             title: 'Gagal menambahkan data buku!',
           });
-          console.log(err.error.errors);
-          console.log('status', err.error.status);
         }
       );
     }

@@ -21,6 +21,10 @@ export class ReportService {
     });
   }
 
+  testError() {
+    return this.http.get(this.baseUrl + 'books/test');
+  }
+
   uploadReport(reportDate: string, reportFile: File) {
     // Mendapatkan user id dari token biar lebih aman
     const token = localStorage.getItem('token') as string;

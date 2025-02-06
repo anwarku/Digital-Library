@@ -140,6 +140,20 @@ export class ReportsComponent implements OnInit {
     );
   }
 
+  testErrorRequest() {
+    this.reportService.testError().subscribe(
+      (res: any) => {},
+      (err: any) => {
+        this.globalService.sweetAlert.fire({
+          icon: 'error',
+          title: err.errors,
+        });
+        console.log(JSON.parse(err.error));
+        console.log(typeof err.error);
+      }
+    );
+  }
+
   getAllReport() {
     this.reportService.getAllReport().subscribe(
       // Success
